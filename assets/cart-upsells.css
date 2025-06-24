@@ -1,0 +1,34 @@
+.cart-upsells {
+  padding-bottom: 20px;
+}
+
+.cart-upsells-title {
+
+}
+
+.cart-upsells-items {
+  overflow-x: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.cart-upsells-item {
+  flex-shrink: 0;
+  width: calc((100% - 16px) / 3 );
+}
+
+.cart-upsells-item-image {
+
+}
+
+.cart-upsells-item-image img {
+
+}
+
+.cart-upsells-item-title {
+
+}
+
+.cart-upsells-item-price {
+
+}
