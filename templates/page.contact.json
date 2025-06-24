@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "163615915167a8dd7f": {
+      "type": "rich-text",
+      "blocks": {
+        "163615915167a8dd7f-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Text Us"
+          }
+        },
+        "163615915167a8dd7f-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>ALL INQUIRIES:  (855) 603-2681</p><p></p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "163615915167a8dd7f-0",
+        "163615915167a8dd7f-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "email Us"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Get in touch using the form below.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "title": "",
+        "text": "",
+        "show_phone": true,
+        "narrow_column": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "163615915167a8dd7f",
+    "rich-text",
+    "form"
+  ]
+}

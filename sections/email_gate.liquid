@@ -1,0 +1,236 @@
+{% assign show = true %}
+
+{% if template.name == 'product'  %}
+  {% assign colletions = product.collections | map: 'id' %}
+
+  {% unless colletions contains section.settings.collection.id or section.settings.collection == blank %}
+    {% assign show = false %}
+  {% endunless %}
+{% elsif template.name == 'collection' %}
+  {% if collection.id != section.settings.collection.id and section.settings.collection != blank %}
+    {% assign show = false %}
+  {% endif %}
+{% endif %}
+
+{% if show == true %}
+  {% unless customer and section.settings.skip_for_registered %}
+
+    <style>
+      .gate--locked {
+        overflow-y: hidden;
+      }
+
+      .gate {
+        background: {{ section.settings.background_color }};
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 30px;
+        text-align: center;
+        color: {{ section.settings.color }};
+        transition: all ease 1s;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        pointer-events: none;
+        z-index: 9999999;
+        font-family: var(--typeBasePrimary), var(--typeBaseFallback);
+      }
+
+      .gate.gate--open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .gate__logo {
+        margin-bottom: 20px;
+      }
+
+      .gate__title {
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        text-transform: none!important;
+      }
+
+      .gate__form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .gate__form input {
+        -webkit-appearance: none;
+        background: none;
+        color: {{ section.settings.color }};
+        border: none;
+        border-bottom: 0.5px solid{{ section.settings.color }};
+        font-size: 16px;
+        width: 100%;
+        padding: 0 0 5px;
+        margin: 0;
+      }
+
+      .gate__form .form__input {
+        margin: 0;
+      }
+
+      .gate__form input::placeholder {
+        color: {{ section.settings.color }};
+      }
+
+      .gate .form__button {
+        background: {{ section.settings.button_background }};
+        color: {{ section.settings.button_color }};
+        -webkit-appearance: none;
+        border: none;
+        margin: 0 auto;
+        cursor: pointer;
+        padding: 10px 50px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .gate .form__button:hover {
+        filter: brightness(1.15);
+      }
+    </style>
+
+    <form id="{{ section.id }}" class="form gate__form" method="POST" action="{{ section.settings.form_url }}">
+      {% if section.settings.logo %}
+        <picture>
+          <source srcset="{{ section.settings.logo | img_url: '130x' }} 1x, {{ section.settings.logo | img_url: '260x' }} 2x">
+          <img class="gate__logo" src="{{ section.settings.logo | img_url: '130x' }}" alt="{{ shop.name | escape }}" loading="lazy">
+        </picture>
+      {% endif %}
+
+      {% if section.settings.title != blank %}
+        <h3 class="gate__title">{{ section.settings.title }}</h3>
+      {% endif %}
+
+      <label class="form__input">
+        <input type="email" name="EMAIL" placeholder="{{ section.settings.placeholder }}" required/>
+      </label>
+
+      <button class="form__button">{{ section.settings.button }}</button>
+    </form>
+
+    <script>
+      const get_params = new URLSearchParams(new URL(window.location.href).searchParams),
+        form = document.querySelector('#{{ section.id }}');
+
+      // Check if email has been already filled by the user
+      if (window.localStorage.getItem('email_gate') !== '1' && get_params.get('skip_gate') !== '1')
+      {
+        document.documentElement.classList.add('gate--locked');
+        document.querySelector('.gate').classList.add('gate--open');
+      }
+      else if (get_params.get('skip_gate') === '1')
+      {
+        window.localStorage.setItem('email_gate', '1');
+      }
+
+      form.addEventListener('submit', (e) =>
+      {
+        e.preventDefault();
+
+        if (!form.checkValidity())
+        {
+          return false;
+        }
+
+        window.localStorage.setItem('email_gate', '1');
+        form.submit();
+      });
+    </script>
+  {% endunless %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Email gate",
+  "tag": "div",
+  "class": "gate",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "Adds an email entry page for the selected collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "form_url",
+      "label": "Form URL"
+    },
+    {
+      "type": "checkbox",
+      "id": "skip_for_registered",
+      "label": "Skip for registered customers",
+      "default": true
+    },
+    {
+      "type": "color_background",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Text color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#B65930"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#fff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Sign up to receive priority access to the new collection"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button",
+      "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Placeholder",
+      "default": "Your email"
+    }
+  ],
+  "templates": [
+    "collection",
+    "product"
+  ],
+  "presets": [
+    {
+      "name": "Email gate"
+    }
+  ]
+}
+{% endschema %}

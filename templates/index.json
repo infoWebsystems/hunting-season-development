@@ -1,0 +1,372 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "CARRY WHAT MATTERS",
+            "title_size": 40,
+            "subheading": "",
+            "link": "shopify://collections/raffia-baskets",
+            "link_text": "SHOP STRAW COLLECTION",
+            "link_2": "shopify://collections/shop-all",
+            "link_text_2": "shop all",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/landing-origami.jpg",
+            "image_mobile": "shopify://shop_images/origami-mobile.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0"
+      ],
+      "settings": {
+        "section_height": "750px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "16504080673c5684ea": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best sellers",
+        "home_featured_products": "best-sellers",
+        "per_row": 5,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "rich_text_JwdNRi": {
+      "type": "rich-text",
+      "blocks": {
+        "button_LcYWaa": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://collections/best-sellers",
+            "link_text": "VIEW ALL"
+          }
+        }
+      },
+      "block_order": [
+        "button_LcYWaa"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1638562419bf49f970": {
+      "type": "featured-collections",
+      "blocks": {
+        "163856241958941a19-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "bags-1",
+            "title": "Bags",
+            "focal_point": "bottom center"
+          }
+        },
+        "3e413ae2-fc68-4fcc-b4b1-8c6b18b99ccd": {
+          "type": "collection",
+          "settings": {
+            "collection": "home-1",
+            "title": "",
+            "focal_point": "bottom center"
+          }
+        }
+      },
+      "block_order": [
+        "163856241958941a19-2",
+        "3e413ae2-fc68-4fcc-b4b1-8c6b18b99ccd"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "SHOP Lifestyle",
+        "divider": true,
+        "per_row": 2,
+        "enable_gutter": true
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "featured-collections-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "natural-fiber",
+            "title": "Natural Fiber",
+            "focal_point": "center center"
+          }
+        },
+        "collection_VeNdQm": {
+          "type": "collection",
+          "settings": {
+            "collection": "canvas",
+            "title": "Canvas",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "leather",
+            "title": "Nappa & Suede",
+            "focal_point": "center center"
+          }
+        },
+        "9f4924fd-3939-4a82-bd2f-4f8d99c167f0": {
+          "type": "collection",
+          "settings": {
+            "collection": "small-leather-goods",
+            "title": "Table Top",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "featured-collections-3",
+        "collection_VeNdQm",
+        "featured-collections-0",
+        "9f4924fd-3939-4a82-bd2f-4f8d99c167f0"
+      ],
+      "settings": {
+        "title": "Shop by Collection",
+        "divider": false,
+        "per_row": 2,
+        "enable_gutter": true
+      }
+    },
+    "1638558019e7d61016": {
+      "type": "featured-collections",
+      "blocks": {
+        "1f9152dd-5856-4131-b56b-35b87a072033": {
+          "type": "collection",
+          "settings": {
+            "collection": "essentials-for-him",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "1a5fb691-9361-45c9-ac83-18358257504a": {
+          "type": "collection",
+          "settings": {
+            "collection": "for-an-evening-out",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "f476183f-36ec-4690-8222-c899d989ba2a": {
+          "type": "collection",
+          "settings": {
+            "collection": "thoughtful-and-timeless",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "0e405d27-ede2-4f56-88fb-c71bd79ca973": {
+          "type": "collection",
+          "settings": {
+            "collection": "modern-host",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "1f9152dd-5856-4131-b56b-35b87a072033",
+        "1a5fb691-9361-45c9-ac83-18358257504a",
+        "f476183f-36ec-4690-8222-c899d989ba2a",
+        "0e405d27-ede2-4f56-88fb-c71bd79ca973"
+      ],
+      "settings": {
+        "title": "SHOP LIFESTYLE",
+        "divider": false,
+        "per_row": 2,
+        "enable_gutter": true
+      }
+    },
+    "1650410007ab92a6c4": {
+      "type": "advanced-content",
+      "blocks": {
+        "165041000772da7cc7-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div id=\"hs-lifestyle\"></div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "165041000772da7cc7-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "New Arrivals",
+        "home_featured_products": "best-sellers",
+        "per_row": 3,
+        "rows": 2,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": true
+      }
+    },
+    "1638930565470f0937": {
+      "type": "rich-text",
+      "blocks": {
+        "db578d7e-62d2-4649-8474-f0789f20746e": {
+          "type": "button",
+          "settings": {
+            "link": "https://hunting-season.com/collections/all?sort_by=created-descending",
+            "link_text": "SHOP ALL"
+          }
+        }
+      },
+      "block_order": [
+        "db578d7e-62d2-4649-8474-f0789f20746e"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1638822920be494111": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/our-story_e775daf7-985e-4914-acf9-8fb26a7c0f45.jpg",
+        "image_width": 620,
+        "subtitle": "",
+        "title": "Our Story",
+        "text": "<p>In an industry guided by seasons, we embrace a different sense of time: one shaped by the experiences and adventures of the people who carry our collection. We believe that your favorite pieces should move fluidly with you throughout your life, and we craft each style with that sentiment in mind.</p>",
+        "button_label": "learn more",
+        "button_link": "shopify://pages/our-story",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Our Journal",
+        "blog": "our-journal",
+        "post_limit": 6,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": false,
+        "blog_image_size": "landscape",
+        "divider": false
+      }
+    },
+    "16389307907f037444": {
+      "type": "rich-text",
+      "blocks": {
+        "1638930790206d704f-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "fba96174-a32e-41c9-a874-ba340e901eb1": {
+          "type": "button",
+          "settings": {
+            "link": "https://hunting-season-development.myshopify.com/blogs/our-journal",
+            "link_text": "more from our journal"
+          }
+        }
+      },
+      "block_order": [
+        "1638930790206d704f-1",
+        "fba96174-a32e-41c9-a874-ba340e901eb1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "map": {
+      "type": "map",
+      "settings": {
+        "map_title": "Hunting Season",
+        "address": "<p>New York, NY USA</p><p>Mon - Fri, 8:30am - 10:30pm</p>",
+        "map_address": "NEW YORK, NY",
+        "api_key": "",
+        "show_button": true,
+        "background_image": "shopify://shop_images/basic-map-2.jpg",
+        "background_image_position": "center center"
+      }
+    },
+    "1639024838c722490d": {
+      "type": "advanced-content",
+      "blocks": {
+        "1639024838676729c2-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div id=\"hs-footer-signup\"></div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1639024838676729c2-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "16504080673c5684ea",
+    "rich_text_JwdNRi",
+    "1638562419bf49f970",
+    "featured-collections",
+    "1638558019e7d61016",
+    "1650410007ab92a6c4",
+    "featured-collection",
+    "1638930565470f0937",
+    "1638822920be494111",
+    "blog-posts",
+    "16389307907f037444",
+    "map",
+    "1639024838c722490d"
+  ]
+}

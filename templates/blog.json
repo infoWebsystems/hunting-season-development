@@ -1,0 +1,138 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "16367381423999b32e": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "1636738142be13b9f4-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "1636738142be13b9f4-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "1636738142be13b9f4-0",
+        "1636738142be13b9f4-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "blog_show_tag_filter": true,
+        "blog_show_rss": false,
+        "blog_show_tags": true,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "landscape"
+      }
+    },
+    "16389310600252f5e0": {
+      "type": "rich-text",
+      "blocks": {
+        "16389310602ebfea9c-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "16389310602ebfea9c-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "16389310602ebfea9c-0",
+        "16389310602ebfea9c-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": true
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection2": {
+          "type": "collection",
+          "settings": {
+            "collection": "leather",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection4": {
+          "type": "collection",
+          "settings": {
+            "collection": "woven",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection3": {
+          "type": "collection",
+          "settings": {
+            "collection": "limited-edition",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "collection1": {
+          "type": "collection",
+          "settings": {
+            "collection": "natural-fiber",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "collection2",
+        "collection4",
+        "collection3",
+        "collection1"
+      ],
+      "settings": {
+        "title": "Shop by Material",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    }
+  },
+  "order": [
+    "16367381423999b32e",
+    "main",
+    "16389310600252f5e0",
+    "featured-collections"
+  ]
+}

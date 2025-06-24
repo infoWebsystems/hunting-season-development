@@ -1,0 +1,196 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "AN ETHOS \nCENTERED ON \nCONNECTEDNESS.",
+            "title_size": 52,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/our-story-2_b2218fc8-ea27-47e2-b0c5-e5a3803a2739.jpg",
+            "image_mobile": "shopify://shop_images/OUR-STORY-MOBILE.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": ""
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>In an industry guided by seasons, we embrace a different sense of time: one shaped by the experiences and adventures of the people who carry our collection. We believe that your favorite pieces should move fluidly with you throughout your life, and we craft each style with that sentiment in mind. </p>"
+          }
+        },
+        "65dfafd3-7722-4eeb-8501-7d6299df4345": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Investing in enduring pieces will finish your wardrobe with styles that speak to you on a personal level—ones that become beloved artifacts, and when filled with memories, will feel one-of-a-kind. For us, this seasonless approach to design is also essential to sustainability. We believe that reimagining the way we impact others will allow us to redefine our impact on the planet.  </p>"
+          }
+        },
+        "cd68e83f-b68a-4b95-8345-ed5385994605": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>This impact starts with our search for talented artisans to bring our pieces to life. Handcrafted using time-honored techniques—from weaving to leather molding—every collection is brought together by expert craftspeople using carefully sourced materials. By working directly with artisans and craftspeople in family-owned businesses, we’re able to invest in their personal success and support their vibrant communities across the globe.  </p>"
+          }
+        },
+        "c52593ca-4eaa-4653-be64-f3ab963b7b3e": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>From thoughtful designs to a conscious effort to contribute to the well-being of others, we’re weaving an ethical responsibility through everything we do. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "65dfafd3-7722-4eeb-8501-7d6299df4345",
+        "cd68e83f-b68a-4b95-8345-ed5385994605",
+        "c52593ca-4eaa-4653-be64-f3ab963b7b3e"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "text-columns": {
+      "type": "text-columns",
+      "blocks": {
+        "column1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "column2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        },
+        "column3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_width": 650,
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
+            "button_label": "Optional button",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "divider": false
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Contact us",
+        "text": "",
+        "show_phone": false,
+        "narrow_column": true
+      }
+    },
+    "map": {
+      "type": "map",
+      "settings": {
+        "map_title": "Hunting Season",
+        "address": "<p>Mon - Fri, 8:30am - 10:30pm</p>",
+        "map_address": "",
+        "api_key": "",
+        "show_button": true,
+        "background_image": "shopify://shop_images/basic-map-2.jpg",
+        "background_image_position": "bottom center"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured collection",
+        "home_featured_products": "",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow",
+    "rich-text",
+    "text-columns",
+    "form",
+    "map",
+    "featured-collection"
+  ]
+}

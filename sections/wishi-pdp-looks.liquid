@@ -1,0 +1,30 @@
+<style>
+  div[wishi-feed] > div {
+    --headerMarginBottom: 50px;
+    --headerFontFamily: var(--typeHeaderPrimary);
+    --headerLetterSpacing: var(--typeHeaderSpacing);
+    --headerFontSize: calc(var(--typeHeaderSize)*.65);
+    --headerFontWeight: var(--typeHeaderWeight);
+    --contentFontFamily: var(--typeHeaderPrimary);
+
+    margin-top: 75px;
+  }
+</style>
+
+<div wishi-feed sku="{{ product.id}}"></div>
+
+{% schema %}
+{
+  "name": "Wishi PDP Looks",
+  "tag": "div",
+  "class": "wishi-pdp-looks",
+  "settings": [
+
+  ],
+  "presets": [
+    {
+      "name": "Wishi PDP Looks"
+    }
+  ]
+}
+{% endschema %}

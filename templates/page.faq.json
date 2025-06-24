@@ -1,0 +1,132 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq-0": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Shipping",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "faq-1": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS YOUR SHIPPING POLICY?",
+            "text": "<p>Within the continental United States we are pleased to offer free Ground Shipping for orders $500 or more via UPS. Priority and International services are available for an additional fee. </p><p>We know that sometimes you need your accessory ASAP! Flat rate of $30 for Same Day Delivery in Manhattan for orders placed before 2 pm.We can also deliver Same Day throughout the 5 Boroughs and the Tri-State Area, please reach out to <a href=\"mailto:support@hunting-season.com\">support@hunting-season.com</a> with your address to obtain a specific price.</p>"
+          }
+        },
+        "fe73e28d-6a04-40b4-907b-8840189ee4df": {
+          "type": "question",
+          "settings": {
+            "title": "HOW FAST ARE ORDERS PROCESSED?",
+            "text": "<p>Please allow 1-4 business days to process and pack your order.  Unless selected otherwise during checkout, all orders within the United States are shipped Ground via UPS and should arrive between 3-5 business days.  </p>"
+          }
+        },
+        "edb1dc60-7121-409c-ab42-c5035b5779a9": {
+          "type": "question",
+          "settings": {
+            "title": "I LIVE ABROAD, DOES HUNTING SEASON SHIP INTERNATIONALLY?",
+            "text": "<p>Yes, we ship all over the world but please note that International orders are considered Final Sale. </p><p>Please allow 1-4 business days to process and pack your order. International orders are shipped via FlavourCloud and should arrive between 6-8 business days.</p><p>Please email us if you have any questions at support@hunting-season.com.</p>"
+          }
+        },
+        "a845f660-3d00-4d49-b0d2-d8419be99eff": {
+          "type": "question",
+          "settings": {
+            "title": "DO I HAVE TO PAY DUTY AND IMPORT CHARGES WHEN SHIPPING INTERNATIONALLY?",
+            "text": "<p>Shipments outside of the US may be subject to import taxes. The product pricing is exclusive of taxes. Once your order arrives at its destination you will be required to pay all import duties, customs and local sales taxes levied by the country you are shipping to, in order to release your order from customs.</p>"
+          }
+        },
+        "4dd27021-7600-435f-902d-938541984204": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IF I RECEIVED A DAMAGED ITEM, OR THE WRONG ITEM?",
+            "text": "<p>We are very sorry this happened, and we will work quickly to resolve the issue. If you’ve received an item that is damaged or received the wrong item, please contact us at support@hunting-season.com, and we will address this immediately. To expedite the process, please include a photo in your e-mail.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Returns",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "faq-2": {
+          "type": "question",
+          "settings": {
+            "title": "WHAT IS YOUR RETURN POLICY?",
+            "text": "<p>We hope you are delighted with your Hunting Season purchase. If<br/>for any reason you are not, we accept the return of any unworn and unaltered<br/>accessory within 15 days of delivery.</p><p>Please note: all items purchased on promotion are considered Final<br/>Sale and are not eligible for return or additional discounts.</p><p>Hunting Season is pleased to offer a streamlined return process.<br/>However, we regret that we cannot refund any original shipping charges. A $20<br/>fee will be deducted from your refund to cover return shipping and restocking.<br/>All returns must be initiated within the 15-day window and received within 10<br/>days of initiation.To start a return, please click <a href=\"http://huntingseason.returnscenter.com\" title=\"http://huntingseason.returnscenter.com\"><strong>here</strong></a>.</p>"
+          }
+        },
+        "2dbfde1c-e575-4130-a947-9dea03eaac57": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Ordering",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "faq-4": {
+          "type": "question",
+          "settings": {
+            "title": "WHICH PAYMENT METHODS DO YOU ACCEPT?",
+            "text": "<p>We accept all major credit cards (AMEX, Visa, Mastercard) and Paypal.</p>"
+          }
+        },
+        "23ae5e15-3d11-4043-823b-0a26b8bdf249": {
+          "type": "rich-text",
+          "settings": {
+            "title": "Care Instructions",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "10ed8824-da35-45c8-a7ee-18d9aa936c3e": {
+          "type": "question",
+          "settings": {
+            "title": "HOW DO I TAKE CARE OF MY HUNTING SEASON PIECE?",
+            "text": "<p>In general we recommend that you:</p><p>Avoid overloading your bag</p><p>Avoid rubbing against abrasive materials</p><p>Shield from humidity, light and heat</p><p>Avoid contact with liquids and solvents</p><p>Store your accessory in its dustbag when not in use</p><p>Based on the composition of your accessory, you’ll find a care card enclosed with your purchase with further details</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-0",
+        "faq-1",
+        "fe73e28d-6a04-40b4-907b-8840189ee4df",
+        "edb1dc60-7121-409c-ab42-c5035b5779a9",
+        "a845f660-3d00-4d49-b0d2-d8419be99eff",
+        "4dd27021-7600-435f-902d-938541984204",
+        "faq-3",
+        "faq-2",
+        "2dbfde1c-e575-4130-a947-9dea03eaac57",
+        "faq-4",
+        "23ae5e15-3d11-4043-823b-0a26b8bdf249",
+        "10ed8824-da35-45c8-a7ee-18d9aa936c3e"
+      ],
+      "settings": {
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq"
+  ]
+}

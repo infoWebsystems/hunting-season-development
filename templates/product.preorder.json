@@ -1,0 +1,164 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": true
+          }
+        },
+        "inventory_status_bVMXBh": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 4,
+            "inventory_transfers_enable": true
+          }
+        },
+        "custom_yzQxc4": {
+          "type": "custom",
+          "settings": {
+            "code": "<div style=\"opacity: .7\">{{ product.metafields.custom.delivery_date }}</div>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        },
+        "custom_ABkGMC": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"product__promos\">\n<div class=\"product__promo\">\n<span>Monthly payments available with</span> <img src=\"{{ 'affirm.svg' | asset_url }}\" height=\"16\"/>\n</div>\n<div class=\"product__promo\">\n<span>Free shipping & returns</span>\n</div>\n</div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "tab_YnbYYk": {
+          "type": "tab",
+          "settings": {
+            "title": "Product Details",
+            "content": "<p>{{ product.metafields.custom.product_details | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "tab_QTbEWB": {
+          "type": "tab",
+          "settings": {
+            "title": "Material & Care",
+            "content": "<p>{{ product.metafields.custom.material_care | metafield_tag }}</p>",
+            "page": ""
+          }
+        },
+        "tab_4AJLLH": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping & Returns",
+            "content": "<p>Within the continental United States we are pleased to offer free Ground Shipping for orders $350 or more via UPS. Priority and International services are available for an additional fee.</p><p>We know that sometimes you need your accessory ASAP! Flat rate of $30 for Same Day Delivery in Manhattan for orders placed before 2 pm.We can also deliver Same Day throughout the 5 Boroughs and the Tri-State Area, please reach out to <a href=\"mailto:support@hunting-season.com\">support@hunting-season.com</a> with your address to obtain a specific price.</p><p>We hope you love your Hunting Season purchase, but if you change your mind we accept the return of any unworn, unaltered accessory, within 15 days of delivery. All items purchased on promotion are considered Final Sale. Please note that Hunting Season deducts $20 from your refund for return shipping and restocking. All initiated returns must be received within 10 days. To start a return, please click <a href=\"http://huntingseason.returnscenter.com/\" title=\"http://huntingseason.returnscenter.com\"><strong>here</strong></a>.</p><p></p><p></p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "price",
+        "separator",
+        "variant_picker",
+        "inventory_status_bVMXBh",
+        "custom_yzQxc4",
+        "buy_buttons",
+        "custom_ABkGMC",
+        "description",
+        "tab_YnbYYk",
+        "tab_QTbEWB",
+        "tab_4AJLLH",
+        "contact",
+        "share"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "settings": {
+        "max_width": true
+      }
+    },
+    "wishi_pdp_looks_4tYVCW": {
+      "type": "wishi-pdp-looks",
+      "settings": {}
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "related_count": 4
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 4
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "wishi_pdp_looks_4tYVCW",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return"
+  ]
+}
