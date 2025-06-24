@@ -99,6 +99,16 @@
         "name": "collection_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "related_collection",
+      "namespace": "custom",
+      "name": "Related Collection",
+      "description": "Select the related collection to display recommended products in the cart",
+      "type": {
+        "name": "collection_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [

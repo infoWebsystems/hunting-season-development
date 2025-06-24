@@ -1540,6 +1540,7 @@ lazySizesConfig.expFactor = 4;
   theme.CartForm = (function() {
     var selectors = {
       products: '[data-products]',
+      upsells: '[data-upsells]',
       qtySelector: '.js-qty__wrapper',
       discounts: '[data-discounts]',
       savings: '[data-savings]',
@@ -1569,6 +1570,7 @@ lazySizesConfig.expFactor = 4;
       this.location = form.dataset.location;
       this.namespace = '.cart-' + this.location;
       this.products = form.querySelector(selectors.products)
+      this.upsells = form.querySelector(selectors.upsells)
       this.submitBtn = form.querySelector(selectors.checkoutBtn);
   
       this.discounts = form.querySelector(selectors.discounts);
@@ -1630,9 +1632,11 @@ lazySizesConfig.expFactor = 4;
       _parseProductHTML: function(html) {
         var parser = new DOMParser();
         var doc = parser.parseFromString(html, 'text/html');
+
         return {
           items: doc.querySelector('.cart__items'),
-          discounts: doc.querySelector('.cart__discounts')
+          discounts: doc.querySelector('.cart__discounts'),
+          upsells: doc.querySelector('.cart__upsells')
         }
       },
   
@@ -1642,7 +1646,9 @@ lazySizesConfig.expFactor = 4;
   
       cartMarkup: function(html) {
         var markup = this._parseProductHTML(html);
+
         var items = markup.items;
+        var upsells = markup.upsells;
         var count = parseInt(items.dataset.count);
         var subtotal = items.dataset.cartSubtotal;
         var savings = items.dataset.cartSavings;
@@ -1661,6 +1667,10 @@ lazySizesConfig.expFactor = 4;
         // Append item markup
         this.products.innerHTML = '';
         this.products.append(items);
+  
+        // Append upsells markup
+        this.upsells.innerHTML = '';
+        this.upsells.append(upsells);
   
         // Update subtotal
         this.subtotal.innerHTML = theme.Currency.formatMoney(subtotal, theme.settings.moneyFormat);

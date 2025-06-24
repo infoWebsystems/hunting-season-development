@@ -16,58 +16,7 @@
       <div class="drawer__inner">
         <div class="drawer__scrollable">
           <div data-products class="appear-animation appear-delay-2"></div>
-
-
-          {% if settings.cart_upsells_enable %}
-            {% assign total_products_to_recommend = 0 %}
-  
-            {% for item in cart.items %}
-              {% assign collection = collections[item.product.metafields.custom.related_collection.value.handle] %}
-              {% if collection %}
-                {% assign total_products_to_recommend = total_products_to_recommend | plus: collection.products.size %}
-              {% endif %}
-            {% endfor %}
-  
-            {% if total_products_to_recommend > 0 %}
-              <div class="cart-upsells">
-                {% if settings.cart_upsells_title != blank %}
-                  <h4 class="cart-upsells-title">{{ settings.cart_upsells_title }}</h4>
-                {% endif %}
-    
-                <div class="cart-upsells-items">
-                  {% for item in cart.items %}
-                    {% assign related_collection = item.product.metafields.custom.related_collection.value %}
-    
-                    {% if related_collection %}
-                      {% assign collection_handle = related_collection.handle %}
-                      {% assign collection = collections[collection_handle] %}
-    
-                      {% if collection %}
-                        {% capture products_in_the_cart %}
-                          {% if cart.items.size == 1 %}3{% endif %}
-                          {% if cart.items.size == 2 %}2{% endif %}
-                          {% if cart.items.size == 3 or cart.items.size > 3 %}1{% endif %}
-                        {% endcapture %}
-    
-                        {% for product in collection.products limit: products_in_the_cart %}
-                          {% unless product.id == item.product.id %}
-                            <a href="{{ product.url }}" class="cart-upsells-item">
-                              <div class="cart-upsells-item-image">
-                                <img src="{{ product.featured_image | image_url }}" alt="{{ product.featured_image.alt }}">
-                              </div>
-                              <div class="cart-upsells-item-title">{{ product.title }}</div>
-                              <div class="cart-upsells-item-price">{{ product.price | money }}</div>
-                            </a>
-                          {% endunless %}
-                        {% endfor %}
-                      {% endif %}
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              </div>
-            {% endif %}
-          {% endif %}
-
+          <div data-upsells class="appear-animation appear-delay-2"></div>
 
           {% if settings.cart_notes_enable %}
             <div class="appear-animation appear-delay-3">
