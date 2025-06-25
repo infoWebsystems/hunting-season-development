@@ -23,7 +23,7 @@
     {% assign total_products_to_recommend = 0 %}
 
     {% for item in cart.items %}
-      {% assign collection = collections[item.product.metafields.custom.related_collection.value.handle] %}
+      {% assign collection = collections[item.product.collections[forloop.index].handle] %}
       {% if collection %}
         {% assign total_products_to_recommend = total_products_to_recommend | plus: collection.products.size %}
       {% endif %}
@@ -37,7 +37,7 @@
 
         <div class="cart-upsells-items">
           {% for item in cart.items %}
-            {% assign related_collection = item.product.metafields.custom.related_collection.value %}
+            {% assign related_collection = item.product.collections[forloop.index] %}
 
             {% if related_collection %}
               {% assign collection_handle = related_collection.handle %}
