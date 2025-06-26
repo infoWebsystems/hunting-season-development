@@ -36,33 +36,35 @@
         {% endif %}
 
         <div class="cart-upsells-items">
+          {% assign collection_handles = '' %}
           {% for item in cart.items %}
-            {% assign related_collection = item.product.collections[forloop.index] %}
+            {% for collection in item.product.collections %}
+              {% assign collection_handles = collection_handles | append: collection.handle | append: ',' %}
+            {% endfor %}
+          {% endfor %}
 
-            {% if related_collection %}
-              {% assign collection_handle = related_collection.handle %}
-              {% assign collection = collections[collection_handle] %}
+          {% assign collection_handles = collection_handles | split: ',' | uniq %}
 
-              {% if collection %}
-                {% capture products_in_the_cart %}
-                  {% if cart.items.size == 1 %}3{% endif %}
-                  {% if cart.items.size == 2 %}2{% endif %}
-                  {% if cart.items.size == 3 or cart.items.size > 3 %}1{% endif %}
-                {% endcapture %}
+          {% assign product_handles = '' %}
+          {% for handle in collection_handles %}
+            {% for product in collections[handle].products limit: 3 %}
+              {% unless cart.items contains product %}
+                {% assign product_handles = product_handles | append: product.handle | append: ',' %}
+              {% endunless %}
+            {% endfor %}
+          {% endfor %}
 
-                {% for product in collection.products limit: products_in_the_cart %}
-                  {% unless product.id == item.product.id %}
-                    <a href="{{ product.url }}" class="cart-upsells-item">
-                      <div class="cart-upsells-item-image">
-                        <img src="{{ product.featured_image | image_url }}" alt="{{ product.featured_image.alt }}">
-                      </div>
-                      <div class="cart-upsells-item-title">{{ product.title }}</div>
-                      <div class="cart-upsells-item-price">{{ product.price | money }}</div>
-                    </a>
-                  {% endunless %}
-                {% endfor %}
-              {% endif %}
-            {% endif %}
+          {% assign product_handle_array = product_handles | split: ',' | uniq %}
+
+          {% for handle in product_handle_array limit: settings.cart_upsells_number %}
+            {% assign rec_product = all_products[handle] %}
+            <a href="{{ rec_product.url }}" class="cart-upsells-item">
+              <div class="cart-upsells-item-image">
+                <img src="{{ rec_product.featured_image | image_url }}" alt="{{ rec_product.featured_image.alt }}">
+              </div>
+              <div class="cart-upsells-item-title">{{ rec_product.title }}</div>
+              <div class="cart-upsells-item-price">{{ rec_product.price | money }}</div>
+            </a>
           {% endfor %}
         </div>
       </div>

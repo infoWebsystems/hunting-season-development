@@ -882,6 +882,17 @@
         "id": "cart_upsells_title",
         "label": "Upsells Title",
         "visible_if": "{{ settings.cart_upsells_enable == true }}"
+      },
+      {
+        "type": "range",
+        "id": "cart_upsells_number",
+        "label": "Upsells Items",
+        "visible_if": "{{ settings.cart_upsells_enable == true }}",
+        "default": 3,
+        "info": "MAX Upsells items to show",
+        "max": 10,
+        "min": 1,
+        "step": 1
       }
     ]
   },
