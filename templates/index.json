@@ -25,8 +25,8 @@
             "link_text_2": "shop all",
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/landing-origami.jpg",
-            "image_mobile": "shopify://shop_images/origami-mobile.jpg",
+            "image": "shopify://shop_images/Sale-Landed.jpg",
+            "image_mobile": "shopify://shop_images/Sale-Mobile.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
