@@ -108,11 +108,10 @@
           },
           "1524770292306": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Take 25% off our Special Mother's Day Collection with code DEARMOM",
+              "text": "Take 25% off our Essentials Collection with code JULY25",
               "link_text": "Shop Now",
-              "link": "shopify://collections/mothers-day"
+              "link": "shopify://collections/july-4th"
             }
           },
           "announcement_P3naKC": {
