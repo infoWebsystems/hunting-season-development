@@ -48,9 +48,20 @@
           {% assign product_handles = '' %}
           {% for handle in collection_handles %}
             {% for product in collections[handle].products limit: 3 %}
-              {% unless cart.items contains product %}
+
+              {% assign in_cart = false %}
+
+              {% for item in cart.items %}
+                {% if item.product.handle == product.handle %}
+                  {% assign in_cart = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+              
+              {% unless in_cart %}
                 {% assign product_handles = product_handles | append: product.handle | append: ',' %}
               {% endunless %}
+
             {% endfor %}
           {% endfor %}
 
