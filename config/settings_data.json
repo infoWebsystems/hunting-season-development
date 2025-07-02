@@ -108,6 +108,7 @@
           },
           "1524770292306": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Take 25% off our Essentials Collection with code JULY25",
               "link_text": "Shop Now",
