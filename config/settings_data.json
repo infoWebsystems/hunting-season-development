@@ -278,6 +278,28 @@
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
+      },
+      "5888675206956468567": {
+        "type": "shopify://apps/loop-returns-exchanges/blocks/onstore/e32ccd84-40d6-4b16-98bf-b6b9da010afd",
+        "disabled": true,
+        "settings": {
+          "show-onstore-bar": false,
+          "api-key": "0650e1bdcae831a09b07f010d98d01b61c57635a",
+          "checkout-selector": ".cart__checkout",
+          "replace-checkout-button": false,
+          "script-discounts": false,
+          "preserve-cart": false,
+          "available-credit-bar-label": "in available credit",
+          "available-credit-bar-mobile-label": "credit",
+          "bar-value-font-size": "15",
+          "bar-label-font-size": "10",
+          "bar-button-font-size": "10",
+          "bottom-bar-alignment": "full",
+          "bar-color": "rgb(0,0,0)",
+          "bar-text-color": "rgb(255,255,255)",
+          "bump-side-cart": true,
+          "side-cart-selector": "#CartDrawer"
+        }
       }
     }
   },
@@ -832,7 +854,10 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".js-product-add-to-cart {background-color: #000000 !important; border-color: #000000 !important; color: #ffffff !important;}"
+      ".js-product-add-to-cart {background-color: #000000 !important; border-color: #000000 !important; color: #ffffff !important;}",
+      "body:has(.loop-onstore) #shopify-chat inbox-online-store-chat {bottom: 90px !important;}",
+      "body:has(.loop-onstore) .product-block.sticky {bottom: 65px;}",
+      "body:has(.loop-onstore):has(.product-block.sticky) #shopify-chat inbox-online-store-chat {bottom: 210px !important;}"
     ]
   }
 }
