@@ -1472,7 +1472,25 @@ lazySizesConfig.expFactor = 4;
         credentials: 'same-origin',
         method: 'GET'
       })
-      .then(function(response) {return response.text()});
+      .then(function(response) {return response.text();})
+      .then(function (html) {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+
+        const upsellContainer = doc.querySelector('.js-cart-upsells-items');
+
+        if (upsellContainer) {
+          const items = [...upsellContainer.children];
+
+          for (let i = items.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [items[i], items[j]] = [items[j], items[i]];
+          }
+
+          upsellContainer.replaceChildren(...items);
+        }
+
+        return doc.body.innerHTML;
+      });
     },
   
     changeItem: function(key, qty) {

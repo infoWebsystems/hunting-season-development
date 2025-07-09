@@ -873,6 +873,10 @@
         "visible_if": "{{ settings.cart_terms_conditions_enable == true }}"
       },
       {
+        "type": "header",
+        "content": "Cart Recommendations"
+      },
+      {
         "type": "checkbox",
         "id": "cart_upsells_enable",
         "label": "Enable Upsells"
@@ -882,6 +886,12 @@
         "id": "cart_upsells_title",
         "label": "Upsells Title",
         "visible_if": "{{ settings.cart_upsells_enable == true }}"
+      },
+      {
+        "type": "collection",
+        "id": "cart_upsells_collection",
+        "label": "Upsells Collection",
+        "info": "Collection with recommended products"
       },
       {
         "type": "range",
