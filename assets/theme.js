@@ -1453,7 +1453,7 @@ lazySizesConfig.expFactor = 4;
   
     return AjaxRenderer;
   })();
-  
+
   theme.cart = {
     getCart: function() {
       var url = ''.concat(theme.routes.cart, '?t=').concat(Date.now());
@@ -1462,37 +1462,35 @@ lazySizesConfig.expFactor = 4;
         method: 'GET'
       }).then(response => response.json());
     },
-  
+
     getCartProductMarkup: function() {
       var url = ''.concat(theme.routes.cartPage, '?t=').concat(Date.now());
-  
       url = url.indexOf('?') === -1 ? (url + '?view=ajax') : (url + '&view=ajax');
-  
+
       return fetch(url, {
         credentials: 'same-origin',
         method: 'GET'
       })
-      .then(function(response) {return response.text();})
-      .then(function (html) {
-        const doc = new DOMParser().parseFromString(html, 'text/html');
+          .then(response => response.text())
+          .then(function (html) {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const upsellContainer = doc.querySelector('.js-cart-upsells-items');
 
-        const upsellContainer = doc.querySelector('.js-cart-upsells-items');
+            if (upsellContainer) {
+              const items = [...upsellContainer.children];
 
-        if (upsellContainer) {
-          const items = [...upsellContainer.children];
+              for (let i = items.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [items[i], items[j]] = [items[j], items[i]];
+              }
 
-          for (let i = items.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [items[i], items[j]] = [items[j], items[i]];
-          }
+              upsellContainer.replaceChildren(...items);
+            }
 
-          upsellContainer.replaceChildren(...items);
-        }
-
-        return doc.body.innerHTML;
-      });
+            return doc.body.innerHTML;
+          });
     },
-  
+
     changeItem: function(key, qty) {
       return this._updateCart({
         url: ''.concat(theme.routes.cartChange, '?t=').concat(Date.now()),
@@ -1500,9 +1498,9 @@ lazySizesConfig.expFactor = 4;
           id: key,
           quantity: qty
         })
-      })
+      });
     },
-  
+
     _updateCart: function(params) {
       return fetch(params.url, {
         method: 'POST',
@@ -1513,12 +1511,12 @@ lazySizesConfig.expFactor = 4;
           'X-Requested-With': 'XMLHttpRequest'
         }
       })
-      .then(response => response.json())
-      .then(function(cart) {
-        return cart;
-      });
+          .then(response => response.json())
+          .then(function(cart) {
+            return cart;
+          });
     },
-  
+
     updateAttribute: function(key, value) {
       return this._updateCart({
         url: '/cart/update.js',
@@ -1529,7 +1527,7 @@ lazySizesConfig.expFactor = 4;
         })
       });
     },
-  
+
     updateNote: function(note) {
       return this._updateCart({
         url: '/cart/update.js',
@@ -1538,7 +1536,7 @@ lazySizesConfig.expFactor = 4;
         })
       });
     },
-  
+
     attributeToString: function(attribute) {
       if ((typeof attribute) !== 'string') {
         attribute += '';
@@ -1547,9 +1545,55 @@ lazySizesConfig.expFactor = 4;
         }
       }
       return attribute.trim();
+    },
+
+    addUpsellProduct: function(variantId, quantity = 1) {
+      return fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          id: variantId,
+          quantity: quantity
+        })
+      })
+          .then(response => {
+            if (!response.ok) {
+              return response.json().then(err => {
+                throw new Error(err.description || 'Error adding upsell product.');
+              });
+            }
+            return response.json();
+          })
+          .then(() => {
+            document.dispatchEvent(new CustomEvent('cart:build'));
+          });
+    },
+
+    initUpsellButtons: function() {
+      const buttons = document.querySelectorAll('.cart-upsells-item-add-to-cart');
+      buttons.forEach(button => {
+        button.removeEventListener('click', theme.cart._upsellClickHandler);
+        button.addEventListener('click', theme.cart._upsellClickHandler);
+      });
+    },
+
+    _upsellClickHandler: function(e) {
+      e.preventDefault();
+      const variantId = this.dataset.variantId;
+
+      if (!variantId) {
+        alert('Missing variant ID');
+        return;
+      }
+
+      theme.cart.addUpsellProduct(variantId);
     }
-  }
-  
+  };
+
+
   /*============================================================================
     CartForm
     - Prevent checkout when terms checkbox exists
@@ -1700,6 +1744,8 @@ lazySizesConfig.expFactor = 4;
         if (Shopify && Shopify.StorefrontExpressButtons) {
           Shopify.StorefrontExpressButtons.initialize();
         }
+
+        theme.cart.initUpsellButtons();
       },
   
       updateCartDiscounts: function(markup) {

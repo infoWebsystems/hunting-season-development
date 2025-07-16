@@ -55,13 +55,16 @@
 
           {% for handle in product_handle_array limit: settings.cart_upsells_number %}
             {% assign rec_product = all_products[handle] %}
-            <a href="{{ rec_product.url }}" class="cart-upsells-item">
-              <div class="cart-upsells-item-image">
-                <img src="{{ rec_product.featured_image | image_url }}" alt="{{ rec_product.featured_image.alt }}">
-              </div>
-              <div class="cart-upsells-item-title">{{ rec_product.title }}</div>
-              <div class="cart-upsells-item-price">{{ rec_product.price | money }}</div>
-            </a>
+            <div class="cart-upsells-item">
+              <a href="{{ rec_product.url }}">
+                <div class="cart-upsells-item-image">
+                  <img src="{{ rec_product.featured_image | image_url }}" alt="{{ rec_product.featured_image.alt }}">
+                </div>
+                <div class="cart-upsells-item-title">{{ rec_product.title }}</div>
+                <div class="cart-upsells-item-price">{{ rec_product.price | money }}</div>
+              </a>
+              <a href="#" data-variant-id="{{ rec_product.selected_or_first_available_variant.id }}" class="cart-upsells-item-add-to-cart">{{ 'products.product.add_to_cart' | t }}</a>
+            </div>
           {% endfor %}
         </div>
       </div>

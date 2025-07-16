@@ -1,7 +1,6 @@
 {
   "article": [],
   "blog": [],
-  "brand": [],
   "collection": [],
   "company": [],
   "company_location": [],
@@ -138,6 +137,26 @@
       "type": {
         "name": "collection_reference",
         "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "preorder_status",
+      "namespace": "custom",
+      "name": "preorder_status",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "shipping_date",
+      "namespace": "custom",
+      "name": "shipping_date",
+      "description": "",
+      "type": {
+        "name": "date",
+        "category": "DATE_TIME"
       }
     }
   ],
