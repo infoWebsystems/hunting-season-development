@@ -47,8 +47,8 @@
     "16504080673c5684ea": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best sellers",
-        "home_featured_products": "best-sellers",
+        "title": "New Arrivals",
+        "home_featured_products": "new-arrivals-1",
         "per_row": 5,
         "rows": 2,
         "mobile_scrollable": true,
