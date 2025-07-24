@@ -158,6 +158,26 @@
         "name": "date",
         "category": "DATE_TIME"
       }
+    },
+    {
+      "key": "preorder_shipment_window_start",
+      "namespace": "custom",
+      "name": "preorder_ship_end",
+      "description": "Pre-Order Expected End of Shipping Window",
+      "type": {
+        "name": "date",
+        "category": "DATE_TIME"
+      }
+    },
+    {
+      "key": "preorder_shipment_window_opening",
+      "namespace": "custom",
+      "name": "preorder_ship_opening",
+      "description": "Expected Start of Shipment Window for Preorders",
+      "type": {
+        "name": "date",
+        "category": "DATE_TIME"
+      }
     }
   ],
   "variant": [
