@@ -869,7 +869,40 @@
       {
         "type": "url",
         "id": "cart_terms_conditions_link",
-        "label": "Terms and conditions page"
+        "label": "Terms and conditions page",
+        "visible_if": "{{ settings.cart_terms_conditions_enable == true }}"
+      },
+      {
+        "type": "header",
+        "content": "Cart Recommendations"
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_upsells_enable",
+        "label": "Enable Upsells"
+      },
+      {
+        "type": "text",
+        "id": "cart_upsells_title",
+        "label": "Upsells Title",
+        "visible_if": "{{ settings.cart_upsells_enable == true }}"
+      },
+      {
+        "type": "collection",
+        "id": "cart_upsells_collection",
+        "label": "Upsells Collection",
+        "info": "Collection with recommended products"
+      },
+      {
+        "type": "range",
+        "id": "cart_upsells_number",
+        "label": "Upsells Items",
+        "visible_if": "{{ settings.cart_upsells_enable == true }}",
+        "default": 3,
+        "info": "MAX Upsells items to show",
+        "max": 10,
+        "min": 1,
+        "step": 1
       }
     ]
   },

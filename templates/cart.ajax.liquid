@@ -17,6 +17,61 @@
     {%- render 'cart-item', product: item -%}
   {% endfor %}
 </div>
+
+<div class="cart__upsells">
+  {% if settings.cart_upsells_enable %}
+    {% assign total_products_to_recommend = 0 %}
+    
+    {% if settings.cart_upsells_collection.all_products_count > 0 %}
+      {% assign total_products_to_recommend = settings.cart_upsells_collection.all_products_count %}
+    {% endif %}
+
+    {% if total_products_to_recommend > 0 %}
+      <div class="cart-upsells">
+        {% if settings.cart_upsells_title != blank %}
+          <h4 class="cart-upsells-title">{{ settings.cart_upsells_title }}</h4>
+        {% endif %}
+
+        <div class="cart-upsells-items js-cart-upsells-items">
+          {% assign cart_product_handles = '' %}
+
+          {%- for item in cart.items -%}
+            {% assign cart_product_handles = cart_product_handles | append: item.product.handle | append: ',' %}
+          {%- endfor -%}
+
+          {% assign product_handles = '' %}
+
+          {% for product in settings.cart_upsells_collection.products %}
+            {% unless cart_product_handles contains product.handle %}
+              {% if product_handles == '' %}
+                {% assign product_handles = product.handle %}
+              {% else %}
+                {% assign product_handles = product_handles | append: ',' | append: product.handle %}
+              {% endif %}
+            {% endunless %}
+          {% endfor %}
+
+          {% assign product_handle_array = product_handles | split: ',' | uniq %}
+
+          {% for handle in product_handle_array limit: settings.cart_upsells_number %}
+            {% assign rec_product = all_products[handle] %}
+            <div class="cart-upsells-item">
+              <a href="{{ rec_product.url }}">
+                <div class="cart-upsells-item-image">
+                  <img src="{{ rec_product.featured_image | image_url }}" alt="{{ rec_product.featured_image.alt }}">
+                </div>
+                <div class="cart-upsells-item-title">{{ rec_product.title }}</div>
+                <div class="cart-upsells-item-price">{{ rec_product.price | money }}</div>
+              </a>
+              <a href="#" data-variant-id="{{ rec_product.selected_or_first_available_variant.id }}" class="cart-upsells-item-add-to-cart">{{ 'products.product.add_to_cart' | t }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
 <div class="cart__discounts cart__item-sub cart__item-row{% if cart.cart_level_discount_applications == blank %} hide{% endif %}">
   <div>{{ 'cart.general.discounts' | t }}</div>
   <div>
