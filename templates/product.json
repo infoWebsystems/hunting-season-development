@@ -20,7 +20,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "Free Shipping on US Orders over $350"
+            "text": "Free Shipping on US Orders over $500"
           }
         },
         "text_qwDRyB": {
@@ -67,7 +67,7 @@
         "custom_fRjxkh": {
           "type": "custom",
           "settings": {
-            "code": "<div class=\"product__promos\">\n<div class=\"product__promo\">\n<span>Monthly payments available with</span> <img src=\"{{ 'affirm.svg' | asset_url }}\" height=\"16\"/>\n</div>\n<div class=\"product__promo\">\n<span>Free shipping & returns</span>\n</div>\n</div>"
+            "code": "<div class=\"product__promos\">\n<div class=\"product__promo\">\n<span>Monthly payments available with</span> <img src=\"{{ 'affirm.svg' | asset_url }}\" height=\"16\"/>\n</div>\n<div class=\"product__promo\">\n<span>Free shipping for US orders over $500 & Easy Returns</span>\n</div>\n</div>"
           }
         },
         "d9bd2812-5870-400f-9fd9-3d4e730c37d7": {
