@@ -29,7 +29,7 @@
           "type": "question",
           "settings": {
             "title": "WHAT IS YOUR SHIPPING POLICY?",
-            "text": "<p>Within the continental United States we are pleased to offer free Ground Shipping for orders $500 or more via UPS. Priority and International services are available for an additional fee. </p><p>We know that sometimes you need your accessory ASAP! Flat rate of $30 for Same Day Delivery in Manhattan for orders placed before 2 pm.We can also deliver Same Day throughout the 5 Boroughs and the Tri-State Area, please reach out to <a href=\"mailto:support@hunting-season.com\">support@hunting-season.com</a> with your address to obtain a specific price.</p>"
+            "text": "<ul><li><strong>Free U.S. shipping</strong> on continental U.S. orders <strong>$500+ (pre-tax).</strong></li><li><strong>Expedited</strong> (Express & Overnight) options are available at checkout. Orders placed by 2 pm EST will ship out the same day. </li><li><strong>International shipping (DDP or DDU):</strong> We recommend <strong>DDP (duties prepaid)</strong> for the smoothest experience. For <strong>DDU</strong>, local duties/taxes are collected from the buyer on delivery by the carrier. <strong>International returns are not accepted</strong> (see Returns).</li><li><strong>NYC Same-Day Delivery</strong> is available to select ZIP codes. Orders placed by <strong>1:00 PM ET, Mon–Fri</strong> qualify; eligibility and fees appear at checkout when selecting local delivery.</li></ul>"
           }
         },
         "fe73e28d-6a04-40b4-907b-8840189ee4df": {
