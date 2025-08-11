@@ -29,7 +29,7 @@
           "type": "question",
           "settings": {
             "title": "WHAT IS YOUR SHIPPING POLICY?",
-            "text": "<ul><li><strong>Free U.S. shipping</strong> on continental U.S. orders <strong>$500+ (pre-tax).</strong></li><li><strong>Expedited</strong> (Express & Overnight) options are available at checkout. Orders placed by 2 pm EST will ship out the same day. </li><li><strong>International shipping (DDP or DDU):</strong> We recommend <strong>DDP (duties prepaid)</strong> for the smoothest experience. For <strong>DDU</strong>, local duties/taxes are collected from the buyer on delivery by the carrier. <strong>International returns are not accepted</strong> (see Returns).</li><li><strong>NYC Same-Day Delivery</strong> is available to select ZIP codes. Orders placed by <strong>1:00 PM ET, Mon–Fri</strong> qualify; eligibility and fees appear at checkout when selecting local delivery.</li></ul>"
+            "text": "<ul><li><strong>Free U.S. shipping</strong> on continental U.S. orders <strong>$500+ (pre-tax).</strong></li><li><strong>Expedited</strong> (Express & Overnight) options are available at checkout. Orders placed by 2 pm EST will ship out the same day. </li><li><strong>International shipping (DDP or DDU):</strong> We recommend <strong>DDP (duties prepaid)</strong> for the smoothest experience. For <strong>DDU</strong>, local duties/taxes are collected from the buyer prior to delivery by the carrier. <strong>International returns are not accepted</strong> (see Returns).</li><li><strong>NYC Same-Day Delivery</strong> is available to select ZIP codes. Orders placed by <strong>1:00 PM ET, Mon–Fri</strong> qualify; eligibility and fees appear at checkout when selecting local delivery.</li></ul>"
           }
         },
         "fe73e28d-6a04-40b4-907b-8840189ee4df": {
@@ -50,7 +50,7 @@
           "type": "question",
           "settings": {
             "title": "DO I HAVE TO PAY DUTY AND IMPORT CHARGES WHEN SHIPPING INTERNATIONALLY?",
-            "text": "<p>Shipments outside of the US may be subject to import taxes. The product pricing is exclusive of taxes. Once your order arrives at its destination you will be required to pay all import duties, customs and local sales taxes levied by the country you are shipping to, in order to release your order from customs.</p>"
+            "text": "<p>Shipments outside of the US may be subject to import taxes. We are pleased to offer DDP for international shipping so that The product pricing is exclusive of taxes. Once your order arrives at its destination you will be required to pay all import duties, customs and local sales taxes levied by the country you are shipping to, in order to release your order from customs.</p>"
           }
         },
         "4dd27021-7600-435f-902d-938541984204": {
