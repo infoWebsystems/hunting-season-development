@@ -62,37 +62,13 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>At Hunting Season, we embrace a quieter rhythm—one shaped by craftsmanship, nature, and the personal journeys of those who carry our pieces. We believe in creating objects that become part of your story—timeless companions that reveal their beauty through use, becoming personal heirlooms.</p><p>Our approach to design is seasonless and intentional. Each piece is built to last, reflecting our belief that true luxury lies in restraint, quality, and purpose.</p><p>We are committed to making thoughtful choices—selecting natural materials, producing in small quantities, and partnering with skilled artisans who bring a deep sense of care to their work. While we continue to evolve, responsibility and integrity remain central to our growth.</p><p>We collaborate with artisans in Colombia, the most biodiverse country in the world, where we source natural fibers and tagua seeds. In Ubrique, Spain, a town known for its centuries-old leatherworking tradition, our leather goods are handcrafted by families who have passed down their skills for generations.</p><p>Our American roots also inspire us—through a reverence for heritage craft, rural traditions, and the quiet elegance of well-made things.</p><p>Hunting Season is more than an accessories brand. It’s a reflection of a way of life—rooted in natural beauty, meaningful connection, and a belief that the purest form of luxury is found in materials from the earth, shaped by human hands, and made with intention. We draw from the traditions of the past to create pieces for the present—and, in<br/>doing so, hope to shape new traditions for the future.</p>"
-          }
-        },
-        "65dfafd3-7722-4eeb-8501-7d6299df4345": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": ""
-          }
-        },
-        "cd68e83f-b68a-4b95-8345-ed5385994605": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": ""
-          }
-        },
-        "c52593ca-4eaa-4653-be64-f3ab963b7b3e": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": ""
+            "text": "<p>At Hunting Season, we embrace a quieter rhythm—one shaped by craftsmanship, nature, and the personal journeys of those who carry our pieces. We believe in creating objects that become part of your story—timeless companions that reveal their beauty through use, becoming personal heirlooms.</p><p>Our approach to design is seasonless and intentional. Each piece is built to last, reflecting our belief that true luxury lies in restraint, quality, and purpose.</p><p>We are committed to making thoughtful choices—selecting natural materials, producing in small quantities, and partnering with skilled artisans who bring a deep sense of care to their work. While we continue to evolve, responsibility and integrity remain central to our growth.</p><p>We collaborate with artisans in Colombia, the most biodiverse country in the world, where we source natural fibers and tagua seeds. In Ubrique, Spain, a town known for its centuries-old leatherworking tradition, our leather goods are handcrafted by families who have passed down their skills for generations.</p><p>Our American roots also inspire us—through a reverence for heritage craft, rural traditions, and the quiet elegance of well-made things.</p><p>Hunting Season is more than an accessories brand. It’s a reflection of a way of life—rooted in natural beauty, meaningful connection, and a belief that the purest form of luxury is found in materials from the earth, shaped by human hands, and made with intention. We draw from the traditions of the past to create pieces for the present—and, in doing so, hope to shape new traditions for the future.</p>"
           }
         }
       },
       "block_order": [
         "heading",
-        "text",
-        "65dfafd3-7722-4eeb-8501-7d6299df4345",
-        "cd68e83f-b68a-4b95-8345-ed5385994605",
-        "c52593ca-4eaa-4653-be64-f3ab963b7b3e"
+        "text"
       ],
       "settings": {
         "align_text": "center",
