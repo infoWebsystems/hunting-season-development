@@ -291,7 +291,6 @@
           "api-key": "0650e1bdcae831a09b07f010d98d01b61c57635a",
           "checkout-selector": ".cart__checkout",
           "replace-checkout-button": false,
-          "script-discounts": false,
           "preserve-cart": false,
           "available-credit-bar-label": "in available credit",
           "available-credit-bar-mobile-label": "credit",
