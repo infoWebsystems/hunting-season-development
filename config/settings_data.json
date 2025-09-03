@@ -172,8 +172,8 @@
             "type": "newsletter",
             "settings": {
               "show_footer_title": true,
-              "title": "Sign up and stay in touch",
-              "text": "<p>Subscribe to receive Hunting Season exclusive offers and brand updates.</p>",
+              "title": "Inside Hunting Season",
+              "text": "<p>Enjoy $75 off your first $400 order when you join our community and gain priority access to new collections and brand updates</p>",
               "container_width": 33
             }
           }
