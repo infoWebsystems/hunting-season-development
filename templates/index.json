@@ -26,7 +26,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/AW25-Landing.jpg",
-            "image_mobile": "shopify://shop_images/Hobo-Mobile_276c5ecd-2c52-4973-a236-7321d4cea142.jpg",
+            "image_mobile": "shopify://shop_images/Mobile-AW25.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
