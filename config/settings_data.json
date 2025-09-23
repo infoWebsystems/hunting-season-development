@@ -308,6 +308,11 @@
         "type": "shopify://apps/pandectes-gdpr/blocks/banner/58c0baa2-6cc1-480c-9ea6-38d6d559556a",
         "disabled": false,
         "settings": {}
+      },
+      "back-in-stock-restock-alerts-4bb73be2-b7c2-4870-949f-c528145452a3": {
+        "type": "shopify://apps/back-in-stock-restock-alerts/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
