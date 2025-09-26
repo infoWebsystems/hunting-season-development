@@ -225,6 +225,39 @@
         ]
       },
       {
+        "type": "klaviyo_notify",
+        "name": "Klaviyo Notify Me",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text",
+            "default": "Notify Me When Available"
+          },
+          {
+            "type": "select",
+            "id": "button_style",
+            "label": "Button style",
+            "default": "primary",
+            "options": [
+              {
+                "value": "primary",
+                "label": "Primary button style"
+              },
+              {
+                "value": "secondary",
+                "label": "Secondary button style"
+              },
+              {
+                "value": "custom",
+                "label": "Custom styling"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "type": "inventory_status",
         "name": "Inventory status",
         "limit": 1,
