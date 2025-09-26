@@ -377,6 +377,21 @@
                                   show_dynamic_checkout: block.settings.show_dynamic_checkout,
                                   current_variant: current_variant
                           -%}
+
+                          <!-- Klaviyo Back In Stock (SMS) Trigger -->
+                          <div class="klaviyo-bis-trigger"
+                               data-product-id="{{ product.id }}"
+                               data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                               data-product-handle="{{ product.handle }}"
+                               {{ block.shopify_attributes }}>
+                            <button type="button"
+                                    class="btn klaviyo-notify-btn {% if block.settings.button_style == 'primary' %}btn--primary{% elsif block.settings.button_style == 'secondary' %}btn--secondary{% endif %}"
+                                    aria-label="Text me when this item is available"
+                                    style="display:none;">
+                              {{ block.settings.button_text | default: 'Text Me When Available' }}
+                            </button>
+                          </div>
+                          <!-- End Klaviyo Back In Stock (SMS) Trigger -->
                         </div>
                       {%- endunless -%}
 
@@ -580,3 +595,58 @@
     observer.observe(variants);
   })();
 </script>
+
+<!-- Scoped BIS behavior (shows button only when selected variant is out of stock) -->
+<script>
+  (function() {
+    var section = document.getElementById('ProductSection-{{ section_id }}-{{ product.id }}');
+    if (!section) return;
+
+    var notifyWrap = section.querySelector('.klaviyo-bis-trigger');
+    var notifyBtn  = section.querySelector('.klaviyo-notify-btn');
+    if (!notifyWrap || !notifyBtn) return;
+
+    var productVariants = {{ product.variants | json }};
+    var currentVariant  = {{ product.selected_or_first_available_variant | json }};
+
+    function toggleKlaviyoNotifyButton(variant) {
+      if (!variant) return;
+      if (!variant.available) {
+        notifyBtn.style.display = 'block';
+        notifyWrap.setAttribute('data-variant-id', variant.id);
+      } else {
+        notifyBtn.style.display = 'none';
+      }
+    }
+
+    // Initial state
+    toggleKlaviyoNotifyButton(currentVariant);
+
+    // Listen for variant changes (native input changes)
+    section.addEventListener('change', function(e) {
+      var target = e.target;
+      if (!target) return;
+
+      if (target.matches('[name="id"], input[type="radio"][name^="options"]')) {
+        var selectedId = target.value;
+        var variant = productVariants.find(function(v){ return String(v.id) === String(selectedId); });
+
+        if (!variant) {
+          var selectId = section.querySelector('select[name="id"]');
+          if (selectId) {
+            variant = productVariants.find(function(v){ return String(v.id) === String(selectId.value); });
+          }
+        }
+        if (variant) toggleKlaviyoNotifyButton(variant);
+      }
+    });
+
+    // Listen for custom events some themes dispatch on variant change
+    section.addEventListener('variant:change', function(e) {
+      if (e && e.detail && e.detail.variant) {
+        toggleKlaviyoNotifyButton(e.detail.variant);
+      }
+    });
+  })();
+</script>
+
