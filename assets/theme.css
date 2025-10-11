@@ -11714,3 +11714,57 @@ inbox-online-store-chat {
     display: flex;
   }
 }
+/* ===== HUNTING SEASON TYPOGRAPHY NORMALIZER ===== */
+/* Forces app-injected text and system elements to match site body font */
+
+:root {
+  --hs-font-body: 'Outfit Light', sans-serif;
+}
+
+/* ✅ Affirm text (monthly payment line + any variations) */
+.affirm-as-low-as,
+.affirm-ala-text,
+[data-affirm-modal],
+.affirm__text,
+.affirm__message {
+  font-family: var(--hs-font-body) !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+}
+
+/* ✅ hCaptcha & surrounding legal/app text */
+.h-captcha,
+.hcaptcha-badge,
+.shopify-challenge__container,
+.shopify-payment-button__more-options,
+.shopify-policy__container {
+  font-family: var(--hs-font-body) !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+}
+
+/* ✅ Native selects (currency, sort, etc.) */
+select,
+.select,
+.facets__select,
+.shopify-payment-button__button--unbranded select {
+  font-family: var(--hs-font-body) !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* ✅ Optional: unify input fields & labels too */
+input,
+textarea,
+button,
+label {
+  font-family: var(--hs-font-body) !important;
+  font-size: inherit;
+  line-height: inherit;
+}
