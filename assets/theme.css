@@ -11714,20 +11714,33 @@ inbox-online-store-chat {
     display: flex;
   }
 }
-/* --- HS: Normalize app-injected text to body typography --- */
+/* --- HS: unify payment/affirm text with body typography --- */
 :root{
-  /* Use Shopify's body font tokens when available; fall back to Outfit 300 */
   --hs-font-family: var(--font-body-family, var(--font-body, 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif));
   --hs-font-weight: var(--font-body-weight, 300);
   --hs-letter-spacing: var(--font-body-letter-spacing, 0);
 }
 
-/* Affirm "Monthly payments" line + variants */
+/* Shopify's own payment-terms text (often wraps installments banner) */
+.shopify-payment-terms__text,
+.shopify-installments__learn-more,
+.shopify-payment-button__more-options,
+.shopify-cleanslate,
+.shopify-policy__container {
+  font-family: var(--hs-font-family) !important;
+  font-weight: var(--hs-font-weight) !important;
+  letter-spacing: var(--hs-letter-spacing) !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+}
+
+/* Affirm-specific text nodes (varies by integration) */
 .affirm-as-low-as,
 .affirm-ala-text,
-[data-affirm-modal],
 .affirm__text,
-.affirm__message{
+.affirm__message,
+[data-affirm-modal] {
   font-family: var(--hs-font-family) !important;
   font-weight: var(--hs-font-weight) !important;
   letter-spacing: var(--hs-letter-spacing) !important;
@@ -11736,26 +11749,13 @@ inbox-online-store-chat {
   color: inherit !important;
 }
 
-/* hCaptcha surrounding text & common app/legal text */
-.h-captcha, .hcaptcha-badge,
-.shopify-challenge__container,
-.shopify-payment-button__more-options,
-.shopify-policy__container{
+/* Keep selects consistent too */
+select, .select, .facets__select {
   font-family: var(--hs-font-family) !important;
   font-weight: var(--hs-font-weight) !important;
   letter-spacing: var(--hs-letter-spacing) !important;
   font-size: inherit !important;
   line-height: inherit !important;
   color: inherit !important;
-}
-
-/* Native selects (currency/sort) */
-select, .select, .facets__select{
-  font-family: var(--hs-font-family) !important;
-  font-weight: var(--hs-font-weight) !important;
-  letter-spacing: var(--hs-letter-spacing) !important;
-  font-size: inherit !important;
-  line-height: inherit !important;
-  color: inherit !important;
-  -webkit-appearance: none; -moz-appearance: none; appearance: none;
+  -webkit-appearance:none; -moz-appearance:none; appearance:none;
 }
