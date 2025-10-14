@@ -125,5 +125,75 @@
  {% include 'smile-initializer' %}
 
 <script defer src="https://static.shopmy.us/Affiliates/sms_aff_clicktrack-huntingseason.js"></script>
+
+<!-- HS Popular Search Suggestions -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Popular search terms for Hunting Season
+  const popularTerms = [
+    'Tagua Jewelry',
+    'Leopard',
+    'Top Handle',
+    'Luxury Raffia',
+    'Soft Clutch',
+    'Pendant'
+  ];
+
+  // Target search inputs across header/drawer/modal
+  const inputs = document.querySelectorAll('input[type="search"][name="q"], input[name="q"][role="searchbox"]');
+
+  inputs.forEach((input) => {
+    // Ensure positioned wrapper for absolute dropdown placement
+    const wrapper = input.parentElement;
+    if (wrapper && getComputedStyle(wrapper).position === 'static') {
+      wrapper.style.position = 'relative';
+    }
+
+    // Build dropdown
+    const box = document.createElement('div');
+    box.className = 'hs-suggest';
+    const list = document.createElement('ul');
+
+    popularTerms.forEach((term) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `/search?q=${encodeURIComponent(term)}`;
+      a.textContent = term;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    box.appendChild(list);
+    (wrapper || input.parentNode).appendChild(box);
+
+    // Show on focus if empty
+    function showSuggestions() {
+      if (!input.value.trim()) box.style.display = 'block';
+    }
+
+    // Hide after blur (short delay so clicks register)
+    function hideSuggestions() {
+      setTimeout(() => { box.style.display = 'none'; }, 120);
+    }
+
+    // Hide while typing (let predictive search take over)
+    function toggleSuggestions() {
+      if (input.value.trim()) box.style.display = 'none';
+      else box.style.display = 'block';
+    }
+
+    input.addEventListener('focus', showSuggestions);
+    input.addEventListener('input', toggleSuggestions);
+    input.addEventListener('blur', hideSuggestions);
+
+    // Optional: close with ESC
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') box.style.display = 'none';
+    });
+  });
+});
+</script>
+<!-- /HS Popular Search Suggestions -->
+
 </body>
 </html>
