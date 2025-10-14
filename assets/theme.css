@@ -11759,24 +11759,68 @@ select, .select, .facets__select {
   color: inherit !important;
   -webkit-appearance:none; -moz-appearance:none; appearance:none;
 }
-/* HS – Popular search suggestions */
+/* ================================
+   HS – Popular Search Suggestions
+   ================================ */
+
 .hs-suggest {
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 50;
-  width: 100%;
+  min-width: 220px;             /* Just wide enough for words */
+  max-width: 300px;             /* Prevent overly wide dropdown */
   background: #fff;
   border: 1px solid #e5e5e5;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-top: 6px;
   box-shadow: 0 8px 24px rgba(0,0,0,.06);
   display: none;
+  overflow: hidden;
+  font-family: inherit;
 }
-.hs-suggest ul { list-style: none; margin: 0; padding: 6px; }
-.hs-suggest li { margin: 0; }
+
+.hs-suggest__title {
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 14px 8px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  background: #fafafa;
+}
+
+.hs-suggest ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hs-suggest li {
+  margin: 0;
+}
+
 .hs-suggest a {
-  display: block; padding: 10px 12px; text-decoration: none;
-  color: inherit;
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #111;
+  font-size: 15px;
+  line-height: 1.4;
+  transition: background 0.2s ease;
+  white-space: nowrap;         /* Prevent wrapping on long words */
 }
-.hs-suggest a:hover { background: #f7f7f7; }
+
+.hs-suggest a:hover {
+  background: #f7f7f7;
+}
+
+/* Optional: align dropdown flush with the right edge of the input */
+@media (min-width: 768px) {
+  .hs-suggest {
+    left: auto;
+    right: 0;
+  }
+}
+
