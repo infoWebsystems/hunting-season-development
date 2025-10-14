@@ -11759,3 +11759,24 @@ select, .select, .facets__select {
   color: inherit !important;
   -webkit-appearance:none; -moz-appearance:none; appearance:none;
 }
+/* HS – Popular search suggestions */
+.hs-suggest {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  margin-top: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  display: none;
+}
+.hs-suggest ul { list-style: none; margin: 0; padding: 6px; }
+.hs-suggest li { margin: 0; }
+.hs-suggest a {
+  display: block; padding: 10px 12px; text-decoration: none;
+  color: inherit;
+}
+.hs-suggest a:hover { background: #f7f7f7; }
