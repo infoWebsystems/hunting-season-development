@@ -126,74 +126,49 @@
 
 <script defer src="https://static.shopmy.us/Affiliates/sms_aff_clicktrack-huntingseason.js"></script>
 
-<!-- HS Popular Search Suggestions -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Popular search terms for Hunting Season
-  const popularTerms = [
-    'Tagua Jewelry',
-    'Leopard',
-    'Top Handle',
-    'Luxury Raffia',
-    'Soft Clutch',
-    'Pendant'
-  ];
+  // ===== Popular Search Suggestions =====
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector('input[type="search"], input[name="q"]');
+    if (!searchInput) return;
 
-  // Target search inputs across header/drawer/modal
-  const inputs = document.querySelectorAll('input[type="search"][name="q"], input[name="q"][role="searchbox"]');
+    const suggestions = [
+      "Tagua Jewelry",
+      "Leopard",
+      "Top Handle",
+      "Luxury Raffia",
+      "Soft Clutch",
+      "Pendant"
+    ];
 
-  inputs.forEach((input) => {
-    // Ensure positioned wrapper for absolute dropdown placement
-    const wrapper = input.parentElement;
-    if (wrapper && getComputedStyle(wrapper).position === 'static') {
-      wrapper.style.position = 'relative';
-    }
+    const suggestionBox = document.createElement("div");
+    suggestionBox.className = "popular-search-suggestions";
 
-    // Build dropdown
-    const box = document.createElement('div');
-    box.className = 'hs-suggest';
-    const list = document.createElement('ul');
-
-    popularTerms.forEach((term) => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = `/search?q=${encodeURIComponent(term)}`;
-      a.textContent = term;
-      li.appendChild(a);
+    const list = document.createElement("ul");
+    suggestions.forEach((term) => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = `/search?q=${encodeURIComponent(term)}`;
+      link.textContent = term;
+      li.appendChild(link);
       list.appendChild(li);
     });
 
-    box.appendChild(list);
-    (wrapper || input.parentNode).appendChild(box);
+    suggestionBox.appendChild(list);
+    suggestionBox.style.display = "none";
+    searchInput.parentNode.appendChild(suggestionBox);
 
-    // Show on focus if empty
-    function showSuggestions() {
-      if (!input.value.trim()) box.style.display = 'block';
-    }
+    searchInput.addEventListener("focus", () => {
+      suggestionBox.style.display = "block";
+    });
 
-    // Hide after blur (short delay so clicks register)
-    function hideSuggestions() {
-      setTimeout(() => { box.style.display = 'none'; }, 120);
-    }
-
-    // Hide while typing (let predictive search take over)
-    function toggleSuggestions() {
-      if (input.value.trim()) box.style.display = 'none';
-      else box.style.display = 'block';
-    }
-
-    input.addEventListener('focus', showSuggestions);
-    input.addEventListener('input', toggleSuggestions);
-    input.addEventListener('blur', hideSuggestions);
-
-    // Optional: close with ESC
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') box.style.display = 'none';
+    document.addEventListener("click", (e) => {
+      if (!suggestionBox.contains(e.target) && e.target !== searchInput) {
+        suggestionBox.style.display = "none";
+      }
     });
   });
-});
 </script>
-<!-- /HS Popular Search Suggestions -->
 
 </body>
 </html>
