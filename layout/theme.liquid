@@ -126,3 +126,49 @@
 
 <script defer src="https://static.shopmy.us/Affiliates/sms_aff_clicktrack-huntingseason.js"></script>
 
+<!-- HS Popular Search Suggestions -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const terms = ["Tagua Jewelry","Leopard","Top Handle","Luxury Raffia","Soft Clutch","Pendant"];
+
+  // Find all search inputs (header, drawer, modal)
+  const inputs = document.querySelectorAll('input[type="search"][name="q"], input[name="q"][role="searchbox"]');
+  if (!inputs.length) return;
+
+  inputs.forEach((input) => {
+    // Anchor to the nearest form (best for alignment), fallback to parent
+    const anchor = input.closest('form') || input.parentElement;
+    if (!anchor) return;
+
+    // Ensure anchor is positioned so dropdown can sit under the field
+    const style = getComputedStyle(anchor);
+    if (style.position === "static") anchor.style.position = "relative";
+
+    // Build dropdown
+    const box = document.createElement("div");
+    box.className = "hs-popular";
+    box.style.display = "none";
+    box.setAttribute("role","listbox");
+    box.innerHTML = `
+      <div class="hs-popular__title">Popular Searches</div>
+      <ul class="hs-popular__list">
+        ${terms.map(t => `<li class="hs-popular__item"><a class="hs-popular__link" href="/search?q=${encodeURIComponent(t)}">${t}</a></li>`).join("")}
+      </ul>
+    `;
+    anchor.appendChild(box);
+
+    // Show only when empty + focused
+    const render = () => { box.style.display = (input.value.trim() === "") ? "block" : "none"; };
+    input.addEventListener("focus", render);
+    input.addEventListener("input", render);
+
+    // Hide when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!box.contains(e.target) && e.target !== input) box.style.display = "none";
+    });
+
+    // Keep box open when interacting with it
+    box.addEventListener("mousedown", (e) => e.preventDefault());
+  });
+});
+</script>
