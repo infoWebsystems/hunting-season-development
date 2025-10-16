@@ -29,7 +29,7 @@
           "type": "question",
           "settings": {
             "title": "WHAT IS YOUR SHIPPING POLICY?",
-            "text": "<ul><li><strong>Free U.S. shipping</strong> on continental U.S. orders <strong>$500+ (pre-tax).</strong></li><li><strong>Expedited</strong> (Express & Overnight) options are available at checkout. Orders placed by 2 pm EST will ship out the same day. </li><li><strong>International shipping (DDP or DDU):</strong> We recommend <strong>DDP (duties prepaid)</strong> for the smoothest experience. For <strong>DDU</strong>, local duties/taxes are collected from the buyer prior to delivery by the carrier. <strong>International returns are not accepted</strong> (see Returns).</li><li><strong>NYC Same-Day Delivery</strong> is available to select ZIP codes. Orders placed by <strong>1:00 PM ET, Mon–Fri</strong> qualify; eligibility and fees appear at checkout when selecting local delivery.</li></ul>"
+            "text": "<ul><li><strong>Free U.S. shipping</strong> on continental U.S. orders <strong>$500+ (pre-tax).</strong></li><li><strong>Expedited</strong> (Express & Overnight) options are available at checkout. Orders placed by 2 pm EST will ship out the same day. </li><li><strong>International shipping (DDP or DDU):</strong> <strong>We recommend DDP (duties prepaid)</strong> for the smoothest experience. For <strong>DDU</strong>, local duties/taxes are collected from the buyer prior to delivery by the carrier. <strong>International returns are not accepted</strong> (see Returns).</li></ul>"
           }
         },
         "fe73e28d-6a04-40b4-907b-8840189ee4df": {
