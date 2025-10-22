@@ -112,11 +112,10 @@
           },
           "1524770292306": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "Take 25% off our Essentials Collection with code JULY25",
-              "link_text": "Shop Now",
-              "link": "shopify://collections/july-4th"
+              "text": "Join our community for early access to Holiday exclusives",
+              "link_text": "Subscribe",
+              "link": "https://hunting-season.com/pages/subscribe"
             }
           },
           "announcement_P3naKC": {
