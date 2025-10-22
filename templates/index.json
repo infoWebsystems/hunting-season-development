@@ -111,11 +111,11 @@
     "featured-collections": {
       "type": "featured-collections",
       "blocks": {
-        "featured-collections-3": {
+        "featured-collections-0": {
           "type": "collection",
           "settings": {
-            "collection": "natural-fiber",
-            "title": "Natural Fiber",
+            "collection": "leather",
+            "title": "Nappa & Suede",
             "focal_point": "center center"
           }
         },
@@ -127,11 +127,11 @@
             "focal_point": "center center"
           }
         },
-        "featured-collections-0": {
+        "featured-collections-3": {
           "type": "collection",
           "settings": {
-            "collection": "leather",
-            "title": "Nappa & Suede",
+            "collection": "natural-fiber",
+            "title": "Natural Fiber",
             "focal_point": "center center"
           }
         },
@@ -145,9 +145,9 @@
         }
       },
       "block_order": [
-        "featured-collections-3",
-        "collection_VeNdQm",
         "featured-collections-0",
+        "collection_VeNdQm",
+        "featured-collections-3",
         "9f4924fd-3939-4a82-bd2f-4f8d99c167f0"
       ],
       "settings": {
