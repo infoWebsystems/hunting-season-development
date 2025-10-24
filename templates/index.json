@@ -160,10 +160,10 @@
     "1638558019e7d61016": {
       "type": "featured-collections",
       "blocks": {
-        "1f9152dd-5856-4131-b56b-35b87a072033": {
+        "f476183f-36ec-4690-8222-c899d989ba2a": {
           "type": "collection",
           "settings": {
-            "collection": "essentials-for-him",
+            "collection": "thoughtful-and-timeless",
             "title": "",
             "focal_point": "center center"
           }
@@ -176,10 +176,10 @@
             "focal_point": "center center"
           }
         },
-        "f476183f-36ec-4690-8222-c899d989ba2a": {
+        "1f9152dd-5856-4131-b56b-35b87a072033": {
           "type": "collection",
           "settings": {
-            "collection": "thoughtful-and-timeless",
+            "collection": "essentials-for-him",
             "title": "",
             "focal_point": "center center"
           }
@@ -194,9 +194,9 @@
         }
       },
       "block_order": [
-        "1f9152dd-5856-4131-b56b-35b87a072033",
-        "1a5fb691-9361-45c9-ac83-18358257504a",
         "f476183f-36ec-4690-8222-c899d989ba2a",
+        "1a5fb691-9361-45c9-ac83-18358257504a",
+        "1f9152dd-5856-4131-b56b-35b87a072033",
         "0e405d27-ede2-4f56-88fb-c71bd79ca973"
       ],
       "settings": {
