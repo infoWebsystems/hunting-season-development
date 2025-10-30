@@ -14,159 +14,25 @@
       "disabled": true,
       "settings": {}
     },
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slideshow-0": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "AN ETHOS \nCENTERED ON \nCONNECTEDNESS.",
-            "title_size": 52,
-            "subheading": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/our-story-2_b2218fc8-ea27-47e2-b0c5-e5a3803a2739.jpg",
-            "image_mobile": "shopify://shop_images/OUR-STORY-MOBILE.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "slideshow-0"
-      ],
+    "text_and_image_pAVLiY": {
+      "type": "text-and-image",
+      "name": "Image with text",
       "settings": {
-        "section_height": "650px",
-        "mobile_height": "auto",
-        "parallax": true,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 7
-      }
-    },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": ""
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "enlarge_text": true,
-            "text": "<p>At Hunting Season, we embrace a quieter rhythm—one shaped by craftsmanship, nature, and the personal journeys of those who carry our pieces. We believe in creating objects that become part of your story—timeless companions that reveal their beauty through use, becoming personal heirlooms.</p><p>Our approach to design is seasonless and intentional. Each piece is built to last, reflecting our belief that true luxury lies in restraint, quality, and purpose.</p><p>We are committed to making thoughtful choices—selecting natural materials, producing in small quantities, and partnering with skilled artisans who bring a deep sense of care to their work. While we continue to evolve, responsibility and integrity remain central to our growth.</p><p>We collaborate with artisans in Colombia, the most biodiverse country in the world, where we source natural fibers and tagua seeds. In Ubrique, Spain, a town known for its centuries-old leatherworking tradition, our leather goods are handcrafted by families who have passed down their skills for generations.</p><p>Our American roots also inspire us—through a reverence for heritage craft, rural traditions, and the quiet elegance of well-made things.</p><p>Hunting Season is more than an accessories brand. It’s a reflection of a way of life—rooted in natural beauty, meaningful connection, and a belief that the purest form of luxury is found in materials from the earth, shaped by human hands, and made with intention. We draw from the traditions of the past to create pieces for the present—and, in doing so, hope to shape new traditions for the future.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "align_text": "center",
-        "narrow_column": true,
-        "divider": false
-      }
-    },
-    "text-columns": {
-      "type": "text-columns",
-      "blocks": {
-        "column1": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "button_label": "Optional button",
-            "button_link": ""
-          }
-        },
-        "column2": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "button_label": "Optional button",
-            "button_link": ""
-          }
-        },
-        "column3": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "button_label": "Optional button",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "align_text": "center",
-        "divider": false
-      }
-    },
-    "form": {
-      "type": "contact-form",
-      "settings": {
-        "title": "Contact us",
-        "text": "",
-        "show_phone": false,
-        "narrow_column": true
-      }
-    },
-    "map": {
-      "type": "map",
-      "settings": {
-        "map_title": "Hunting Season",
-        "address": "<p>Mon - Fri, 8:30am - 10:30pm</p>",
-        "map_address": "",
-        "api_key": "",
-        "show_button": true,
-        "background_image": "shopify://shop_images/basic-map-2.jpg",
-        "background_image_position": "bottom center"
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Featured collection",
-        "home_featured_products": "",
-        "per_row": 4,
-        "rows": 1,
-        "mobile_scrollable": true,
-        "view_all": true,
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
         "divider": false
       }
     }
   },
   "order": [
     "main",
-    "slideshow",
-    "rich-text",
-    "text-columns",
-    "form",
-    "map",
-    "featured-collection"
+    "text_and_image_pAVLiY"
   ]
 }
