@@ -20,10 +20,17 @@
         "heading_FhUpze": {
           "type": "heading",
           "settings": {
-            "title": "Rich text"
+            "title": "Our sustainability journey"
           }
         },
         "text_pRVVhW": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "text_MhLa9y": {
           "type": "text",
           "settings": {
             "enlarge_text": true,
@@ -33,7 +40,8 @@
       },
       "block_order": [
         "heading_FhUpze",
-        "text_pRVVhW"
+        "text_pRVVhW",
+        "text_MhLa9y"
       ],
       "name": "Rich text",
       "settings": {
