@@ -14,22 +14,6 @@
       "disabled": true,
       "settings": {}
     },
-    "text_and_image_pAVLiY": {
-      "type": "text-and-image",
-      "name": "Image with text",
-      "settings": {
-        "image_width": 700,
-        "subtitle": "",
-        "title": "Image with text",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "divider": false
-      }
-    },
     "rich_text_CemjkB": {
       "type": "rich-text",
       "blocks": {
@@ -57,11 +41,44 @@
         "narrow_column": true,
         "divider": false
       }
+    },
+    "text_and_image_pAVLiY": {
+      "type": "text-and-image",
+      "name": "Image with text",
+      "settings": {
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "text_and_image_UtgtcC": {
+      "type": "text-and-image",
+      "name": "Image with text",
+      "settings": {
+        "image_width": 700,
+        "subtitle": "",
+        "title": "Image with text",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "right",
+        "layout": "right",
+        "divider": false
+      }
     }
   },
   "order": [
     "main",
     "rich_text_CemjkB",
-    "text_and_image_pAVLiY"
+    "text_and_image_pAVLiY",
+    "text_and_image_UtgtcC"
   ]
 }
