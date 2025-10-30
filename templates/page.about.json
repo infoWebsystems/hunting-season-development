@@ -29,10 +29,39 @@
         "layout": "right",
         "divider": false
       }
+    },
+    "rich_text_CemjkB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FhUpze": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "text_pRVVhW": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FhUpze",
+        "text_pRVVhW"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
     }
   },
   "order": [
     "main",
+    "rich_text_CemjkB",
     "text_and_image_pAVLiY"
   ]
 }
