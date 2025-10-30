@@ -29,8 +29,29 @@
             "enlarge_text": true,
             "text": "<p>We know that being fully sustainable is a continuous journey. We're committed to transparency about where we are, where we're going, and the steps we're taking to ensure our operations honor both people and the planet.</p>"
           }
+        }
+      },
+      "block_order": [
+        "heading_FhUpze",
+        "text_pRVVhW"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "rich_text_AXaamC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TLhgAW": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
         },
-        "text_MhLa9y": {
+        "text_pyitUr": {
           "type": "text",
           "settings": {
             "enlarge_text": true,
@@ -39,13 +60,12 @@
         }
       },
       "block_order": [
-        "heading_FhUpze",
-        "text_pRVVhW",
-        "text_MhLa9y"
+        "heading_TLhgAW",
+        "text_pyitUr"
       ],
       "name": "Rich text",
       "settings": {
-        "align_text": "center",
+        "align_text": "right",
         "narrow_column": true,
         "divider": false
       }
@@ -70,6 +90,7 @@
   "order": [
     "main",
     "rich_text_CemjkB",
+    "rich_text_AXaamC",
     "text_and_image_pAVLiY"
   ]
 }
