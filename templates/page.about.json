@@ -42,6 +42,26 @@
         "divider": false
       }
     },
+    "rich_text_ctUpJB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_A6AKFW": {
+          "type": "heading",
+          "settings": {
+            "title": "OUR VALUES"
+          }
+        }
+      },
+      "block_order": [
+        "heading_A6AKFW"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "rich_text_AXaamC": {
       "type": "rich-text",
       "blocks": {
@@ -65,7 +85,7 @@
       ],
       "name": "Rich text",
       "settings": {
-        "align_text": "right",
+        "align_text": "left",
         "narrow_column": true,
         "divider": false
       }
@@ -74,6 +94,7 @@
       "type": "text-and-image",
       "name": "Image with text",
       "settings": {
+        "image": "shopify://shop_images/2G1B6451.jpg",
         "image_width": 700,
         "subtitle": "",
         "title": "Image with text",
@@ -90,6 +111,7 @@
   "order": [
     "main",
     "rich_text_CemjkB",
+    "rich_text_ctUpJB",
     "rich_text_AXaamC",
     "text_and_image_pAVLiY"
   ]
