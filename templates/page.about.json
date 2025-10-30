@@ -65,23 +65,153 @@
     "rich_text_AXaamC": {
       "type": "rich-text",
       "blocks": {
-        "heading_TLhgAW": {
-          "type": "heading",
-          "settings": {
-            "title": "Rich text"
-          }
-        },
         "text_pyitUr": {
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "text": "<p>RESPONSIBLE MATERIALS</p>"
+          }
+        },
+        "text_kTLgxM": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Thoughtfully sourced, low-impact, and built to last—from the product to the packaging. We prioritize materials that meet rigorous environmental standards and aim to select certified suppliers who share our commitment to reducing impact. Every material choice is made with longevity in mind, ensuring our pieces can be treasured for years to come.</p>"
+          }
+        },
+        "text_WRxhCz": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>ARTISINAL CRAFTMANSHIP</p>"
+          }
+        },
+        "text_mGMyKk": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Rooted in tradition, made by hand, and empowering communities. We partner with skilled artisans who bring generations of knowledge to every piece. By choosing handcrafted over mass-produced, we preserve traditional techniques while providing meaningful employment and supporting local economies.</p>"
+          }
+        },
+        "text_jqrdVi": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>CONCIOUS PRODUCTION</p>"
+          }
+        },
+        "text_LfhG6C": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Produced with care in trusted workshops, minimizing waste and overproduction. We work with a select network of manufacturers who share our values, producing limited quantities to avoid excess inventory. Every step of our production process is designed to reduce waste and maximize efficiency without compromising quality.</p>"
+          }
+        },
+        "text_mRKAyB": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>TIMELESS DESIGN</p>"
+          }
+        },
+        "text_gMULpg": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Fewer, better pieces—crafted for longevity, not seasons. Our designs transcend trends, focusing on classic silhouettes and versatile styles that remain relevant year after year. We believe in investing in quality pieces that become more beautiful with age, rather than disposable fashion.</p>"
+          }
+        },
+        "text_jdiTzr": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>TRANSPARENT IMPACT</p>"
+          }
+        },
+        "text_Tpr6LP": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Sharing our journey openly, with progress over perfection. We're honest about where we are and where we're headed. We believe our customers deserve to know the full story behind their purchases—the good, the challenging, and the work still ahead.</p>"
           }
         }
       },
       "block_order": [
-        "heading_TLhgAW",
-        "text_pyitUr"
+        "text_pyitUr",
+        "text_kTLgxM",
+        "text_WRxhCz",
+        "text_mGMyKk",
+        "text_jqrdVi",
+        "text_LfhG6C",
+        "text_mRKAyB",
+        "text_gMULpg",
+        "text_jdiTzr",
+        "text_Tpr6LP"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "rich_text_KgeA9V": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cm4Gry": {
+          "type": "heading",
+          "settings": {
+            "title": "HOW WE BRING OUR VALUES TO LIFE"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cm4Gry"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "rich_text_fcVYLk": {
+      "type": "rich-text",
+      "blocks": {
+        "text_bnXePr": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>CERTIFIED LEATHER SOURCING</p>"
+          }
+        },
+        "text_tBirFh": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We source our leather exclusively from tanneries with Leather Working Group (Silver) certifications. Our leather pieces are expertly crafted in Ubrique, Spain, a region renowned for its centuries-old leather working traditions and commitment to quality craftsmanship.</p><p>Nestled in the mountains of Cádiz, Ubrique is a town built on leather. For generations, family workshops have refined a discipline of precision—clean cuts, steady stitches, and edges that feel like porcelain. These artisans perfect the details that define quiet luxury: finishes that are impeccable, structures that are true, and a hand-feel that is refined.</p><p>Hunting Season collaborates with family-run ateliers in Ubrique using vegetable-tanned and chrome-free leathers, preserving centuries-old craft while providing dignified employment and maintaining the highest environmental standards.</p>"
+          }
+        },
+        "text_zqjjCr": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>NATURAL FIBERS FROM COLOMBIA</p>"
+          }
+        },
+        "text_t7damw": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We work with natural fibers including Fique, Iraca, and Tagua sourced from Colombia, as well as molded vegetable leather. By partnering with local artisans, we support traditional craft communities and help preserve heritage techniques while creating employment opportunities.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_bnXePr",
+        "text_tBirFh",
+        "text_zqjjCr",
+        "text_t7damw"
       ],
       "name": "Rich text",
       "settings": {
@@ -97,8 +227,8 @@
         "image": "shopify://shop_images/2G1B6451.jpg",
         "image_width": 700,
         "subtitle": "",
-        "title": "Image with text",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "title": "",
+        "text": "<p><strong>Fique (Furcraea andina)</strong> is a hardy, agave-like plant native to the Andean highlands, where it has been cultivated for generations for its strong, versatile fibers. Taking approximately four years to reach maturity, fique requires minimal chemical inputs and supports soil conservation in steep terrain. In recent years, it has gained renewed significance as a sustainable economic alternative in regions historically affected by illicit crops, offering dignified livelihoods through crop-substitution initiatives.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -111,11 +241,11 @@
       "type": "text-and-image",
       "name": "Image with text",
       "settings": {
-        "image": "shopify://shop_images/2G1B6451.jpg",
+        "image": "shopify://shop_images/SEASONS05876.png",
         "image_width": 700,
         "subtitle": "",
-        "title": "Image with text",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "title": "",
+        "text": "<p><strong>Tagua</strong>, known as \"vegetable ivory,\" comes from the seed of the Phytelephas palm found in Colombia's humid tropical forests. Taking approximately fourteen years to produce its first fruit, the palm then bears seed-filled clusters repeatedly. We work only with naturally fallen seeds, never cutting them green—a practice that ensures both quality and ecological responsibility. Colombia is home to four of the world's seven tagua species, making it a vital source for this sustainable alternative to animal ivory.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -128,11 +258,11 @@
       "type": "text-and-image",
       "name": "Image with text",
       "settings": {
-        "image": "shopify://shop_images/2G1B6451.jpg",
+        "image": "shopify://shop_images/12.png",
         "image_width": 700,
         "subtitle": "",
-        "title": "Image with text",
-        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>",
+        "title": "",
+        "text": "<p><strong>Tagua</strong>, known as \"vegetable ivory,\" comes from the seed of the Phytelephas palm found in Colombia's humid tropical forests. Taking approximately fourteen years to produce its first fruit, the palm then bears seed-filled clusters repeatedly. We work only with naturally fallen seeds, never cutting them green—a practice that ensures both quality and ecological responsibility. Colombia is home to four of the world's seven tagua species, making it a vital source for this sustainable alternative to animal ivory.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -149,12 +279,68 @@
         "image_width": 700,
         "subtitle": "",
         "title": "",
-        "text": "<p>Molded vegetable tanned leather represents a traditional hand-sculpting technique where untreated leather is dampened and carefully shaped over wooden molds. Once dry, each piece retains its sculptural form, with the hide's natural marks and scars remaining visible—authentic signatures we honor rather than conceal.</p>",
+        "text": "<p><strong>Molded vegetable tanned leather </strong>represents a traditional hand-sculpting technique where untreated leather is dampened and carefully shaped over wooden molds. Once dry, each piece retains its sculptural form, with the hide's natural marks and scars remaining visible—authentic signatures we honor rather than conceal.</p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
         "align_text": "left",
         "layout": "left",
+        "divider": false
+      }
+    },
+    "rich_text_AU78cy": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CGNNBp": {
+          "type": "heading",
+          "settings": {
+            "title": "FAIR PARTNERSHIPS"
+          }
+        },
+        "text_QrFaw4": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We maintain strong, personal relationships with all our manufacturers and artisans. Paying a living wage isn't optional for us—it's fundamental. We believe that beautiful products should never come at the cost of someone's wellbeing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CGNNBp",
+        "text_QrFaw4"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "rich_text_T487yT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qKkDpm": {
+          "type": "heading",
+          "settings": {
+            "title": "ALWAYS EVOLVING"
+          }
+        },
+        "text_Tgd9NT": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We're constantly exploring new ways to minimize our environmental impact. Currently, we're researching and experimenting with natural dyes, innovative sustainable materials and sustainable packaging.</p><p>Our commitment to transparency means we'll share our progress, our challenges, and our learnings along the way. Sustainability isn't about perfection—it's about progress, and we're dedicated to showing up and doing the work.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qKkDpm",
+        "text_Tgd9NT"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
         "divider": false
       }
     }
@@ -164,9 +350,13 @@
     "rich_text_CemjkB",
     "rich_text_ctUpJB",
     "rich_text_AXaamC",
+    "rich_text_KgeA9V",
+    "rich_text_fcVYLk",
     "text_and_image_pAVLiY",
     "text_and_image_yFkaVb",
     "text_and_image_nGqHFF",
-    "text_and_image_43ypb3"
+    "text_and_image_43ypb3",
+    "rich_text_AU78cy",
+    "rich_text_T487yT"
   ]
 }
