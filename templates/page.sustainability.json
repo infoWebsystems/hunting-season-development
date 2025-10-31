@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow_tdaWmQ": {
+      "type": "slideshow",
+      "blocks": {
+        "image_U3hAQ9": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "AN ETHOS CENTERED ON CONNECTEDNESS.  \nCARRY WHAT MATTERS.\nFROM SOIL TO PRODUCT.",
+            "title_size": 51,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/2G1B2710.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_U3hAQ9"
+      ],
+      "name": "Hero (optional slideshow)",
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "rich_text_CemjkB": {
+      "type": "rich-text",
+      "blocks": {
+        "text_pRVVhW": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>At Hunting Season, we embrace a quieter rhythm—one shaped by craftsmanship, nature, and the personal journeys of those who carry our pieces. We believe in creating objects that become part of your story—timeless companions that reveal their beauty through use, becoming personal heirlooms.</p><p>Our approach to design is seasonless and intentional. Each piece is built to last, reflecting our belief that true luxury lies in restraint, quality, and purpose.</p><p>We are committed to making thoughtful choices—selecting natural materials, producing in small quantities, and partnering with skilled artisans who bring a deep sense of care to their work. While we continue to evolve, responsibility and integrity remain central to our growth.</p><p>We collaborate with artisans in Colombia, the most biodiverse country in the world, where we source natural fibers and tagua seeds. In Ubrique, Spain, a town known for its centuries-old leatherworking tradition, our leather goods are handcrafted by families who have passed down their skills for generations.</p><p>Our American roots also inspire us—through a reverence for heritage craft, rural traditions, and the quiet elegance of well-made things.</p><p>Hunting Season is more than an accessories brand. It’s a reflection of a way of life—rooted in natural beauty, meaningful connection, and a belief that the purest form of luxury is found in materials from the earth, shaped by human hands, and made with intention. We draw from the traditions of the past to create pieces for the present—and, in doing so, hope to shape new traditions for the future.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_pRVVhW"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "rich_text_j9Y9gY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fQWkAJ": {
+          "type": "heading",
+          "settings": {
+            "title": "our values"
+          }
+        },
+        "text_KHzDzi": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>RESPONSIBLE MATERIALS </p><p>Thoughtfully sourced, low-impact, and built to last—from the product to the packaging.</p>"
+          }
+        },
+        "text_DkgxaC": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>ARTISINAL CRATFMANSHIP </p><p>Rooted in tradition, made by hand, and empowering communities.</p>"
+          }
+        },
+        "text_BHtnXK": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>CONCIOUS PRODUCTION</p><p>Produced with care in trusted workshops, minimizing waste and overproduction.</p>"
+          }
+        },
+        "text_9MJMVd": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>TIMELESS DESIGN</p><p>Fewer, better pieces—crafted for longevity, not seasons.</p>"
+          }
+        },
+        "text_y6g3wt": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>TRANSPARENT IMPACT </p><p>Sharing our journey openly, with progress over perfection.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fQWkAJ",
+        "text_KHzDzi",
+        "text_DkgxaC",
+        "text_BHtnXK",
+        "text_9MJMVd",
+        "text_y6g3wt"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "contact_form_xUCx9j": {
+      "type": "contact-form",
+      "name": "Contact form",
+      "settings": {
+        "title": "Contact us",
+        "text": "",
+        "show_phone": false,
+        "narrow_column": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_tdaWmQ",
+    "rich_text_CemjkB",
+    "rich_text_j9Y9gY",
+    "contact_form_xUCx9j"
+  ]
+}
