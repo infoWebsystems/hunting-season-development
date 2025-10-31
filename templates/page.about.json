@@ -42,6 +42,59 @@
         "divider": false
       }
     },
+    "slideshow_tdaWmQ": {
+      "type": "slideshow",
+      "blocks": {
+        "image_U3hAQ9": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/2G1B2710.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        },
+        "image_YEUMLj": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Two line\ntitle slide.",
+            "title_size": 80,
+            "subheading": "And big, beautiful imagery",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "overlay_opacity": 0,
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "image_U3hAQ9",
+        "image_YEUMLj"
+      ],
+      "name": "Hero (optional slideshow)",
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
     "rich_text_ctUpJB": {
       "type": "rich-text",
       "blocks": {
@@ -196,7 +249,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>NATURAL FIBERS FROM COLOMBIA</p>"
+            "text": "<p>NATURAL FIBERS, SEEDS, AND CRAFTMANSHIP FROM COLOMBIA </p>"
           }
         },
         "text_t7damw": {
@@ -258,7 +311,7 @@
       "type": "text-and-image",
       "name": "Image with text",
       "settings": {
-        "image": "shopify://shop_images/12.png",
+        "image": "shopify://shop_images/HS4309.jpg",
         "image_width": 550,
         "subtitle": "",
         "title": "",
@@ -275,7 +328,7 @@
       "type": "text-and-image",
       "name": "Image with text",
       "settings": {
-        "image": "shopify://shop_images/Screenshot_2025-10-30_at_12.54.05_60769cea-821d-4d3e-9b07-cefefb93a0b2.png",
+        "image": "shopify://shop_images/x0GZqby7.jpg",
         "image_width": 550,
         "subtitle": "",
         "title": "",
@@ -348,6 +401,7 @@
   "order": [
     "main",
     "rich_text_CemjkB",
+    "slideshow_tdaWmQ",
     "rich_text_ctUpJB",
     "rich_text_AXaamC",
     "rich_text_KgeA9V",
