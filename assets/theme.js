@@ -3082,7 +3082,28 @@ lazySizesConfig.expFactor = 4;
   
       holder.innerHTML = '';
       holder.append(div);
-  
+  // --- Reinitialize variant image switching inside Quick View ---
+if (typeof theme.initProductGrid === 'function') {
+  theme.initProductGrid(); // reuse the same logic used on collection grid
+}
+
+// Fallback manual variant color listener if theme.initProductGrid doesn't exist
+const quickView = holder.querySelector('.product');
+if (quickView) {
+  const swatches = quickView.querySelectorAll('[data-variant-color]');
+  const mainImg = quickView.querySelector('.product__media img');
+
+  swatches.forEach((swatch) => {
+    swatch.addEventListener('mouseenter', (e) => {
+      const color = e.target.dataset.variantColor;
+      const newImage = quickView.querySelector(`img[data-color="${color}"]`);
+      if (newImage && mainImg) {
+        mainImg.src = newImage.dataset.srcLarge || newImage.src;
+      }
+    });
+  });
+}
+
       // Setup quick view modal
       var modalId = 'QuickShopModal-' + productId;
       var name = 'quick-modal-' + productId;
