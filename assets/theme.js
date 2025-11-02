@@ -3094,7 +3094,9 @@ if (quickView) {
   const mainImg = quickView.querySelector('.product__media img');
 
   swatches.forEach((swatch) => {
-    swatch.addEventListener('mouseenter', (e) => {
+  ['mouseenter', 'click'].forEach(evtType => {
+    swatch.addEventListener(evtType, (e) => {
+      e.preventDefault();
       const color = e.target.dataset.variantColor;
       const newImage = quickView.querySelector(`img[data-color="${color}"]`);
       if (newImage && mainImg) {
@@ -3102,6 +3104,8 @@ if (quickView) {
       }
     });
   });
+});
+
 }
 
       // Setup quick view modal
