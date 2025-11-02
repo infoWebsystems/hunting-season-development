@@ -3093,18 +3093,24 @@ if (quickView) {
   const swatches = quickView.querySelectorAll('[data-variant-color]');
   const mainImg = quickView.querySelector('.product__media img');
 
-  swatches.forEach((swatch) => {
-  ['mouseenter', 'click'].forEach(evtType => {
+swatches.forEach((swatch) => {
+  ['mouseover', 'focus', 'click'].forEach((evtType) => {
     swatch.addEventListener(evtType, (e) => {
-      e.preventDefault();
-      const color = e.target.dataset.variantColor;
+      // don't block defaults on hover; keep it light
+      const el = e.currentTarget || e.target.closest('[data-variant-color]');
+      if (!el) return;
+
+      const color = el.dataset.variantColor;
+      if (!color) return;
+
       const newImage = quickView.querySelector(`img[data-color="${color}"]`);
       if (newImage && mainImg) {
         mainImg.src = newImage.dataset.srcLarge || newImage.src;
       }
-    });
+    }, { passive: true });
   });
 });
+
 
 }
 
