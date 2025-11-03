@@ -3093,35 +3093,31 @@ if (quickView) {
   const swatches = quickView.querySelectorAll('[data-variant-color]');
   const mainImg = quickView.querySelector('.product__media img');
 
-// Listen for hover and click on color swatches inside Quick View
-quickView.addEventListener('mouseover', (e) => {
-  const swatch = e.target.closest('.variant-input');
-  if (!swatch) return;
+// Hover & click handler for color swatches inside Quick View
+['mouseover', 'click'].forEach(evtType => {
+  quickView.addEventListener(evtType, (e) => {
+    const swatch = e.target.closest('.variant-input');
+    if (!swatch) return;
 
-  const color = swatch.dataset.value || swatch.querySelector('[data-variant-color]')?.dataset.variantColor;
-  if (!color) return;
+    const color = (swatch.dataset.value || '').toLowerCase().trim();
+    if (!color) return;
 
-  const newImage = quickView.querySelector(`img[data-color="${color}"]`);
-  const mainImg = quickView.querySelector('.product__media img');
-  if (newImage && mainImg) {
-    mainImg.src = newImage.dataset.srcLarge || newImage.src;
-  }
+    const allImages = quickView.querySelectorAll('.product__media img');
+    const mainImg = allImages[0];
+
+    // Try to find matching image by data-color, alt, or src
+    let match = Array.from(allImages).find(img =>
+      (img.dataset.color && img.dataset.color.toLowerCase() === color) ||
+      (img.alt && img.alt.toLowerCase().includes(color)) ||
+      (img.src && img.src.toLowerCase().includes(color))
+    );
+
+    if (match && mainImg && match.src !== mainImg.src) {
+      mainImg.src = match.dataset.srcLarge || match.src;
+    }
+  });
 });
 
-// Also handle clicks for mobile/touch users
-quickView.addEventListener('click', (e) => {
-  const swatch = e.target.closest('.variant-input');
-  if (!swatch) return;
-
-  const color = swatch.dataset.value || swatch.querySelector('[data-variant-color]')?.dataset.variantColor;
-  if (!color) return;
-
-  const newImage = quickView.querySelector(`img[data-color="${color}"]`);
-  const mainImg = quickView.querySelector('.product__media img');
-  if (newImage && mainImg) {
-    mainImg.src = newImage.dataset.srcLarge || newImage.src;
-  }
-});
 
 
 
