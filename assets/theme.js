@@ -3093,23 +3093,32 @@ if (quickView) {
   const swatches = quickView.querySelectorAll('[data-variant-color]');
   const mainImg = quickView.querySelector('.product__media img');
 
-swatches.forEach((swatch) => {
-  ['mouseover', 'focus', 'click'].forEach((evtType) => {
-    swatch.addEventListener(evtType, (e) => {
-      // don't block defaults on hover; keep it light
-      const el = e.currentTarget || e.target.closest('[data-variant-color]');
-      if (!el) return;
+// Listen on the entire quick view container to catch hover events on nested elements
+quickView.addEventListener('mouseover', (e) => {
+  const swatch = e.target.closest('[data-variant-color]');
+  if (!swatch) return;
 
-      const color = el.dataset.variantColor;
-      if (!color) return;
-
-      const newImage = quickView.querySelector(`img[data-color="${color}"]`);
-      if (newImage && mainImg) {
-        mainImg.src = newImage.dataset.srcLarge || newImage.src;
-      }
-    }, { passive: true });
-  });
+  const color = swatch.dataset.variantColor;
+  const newImage = quickView.querySelector(`img[data-color="${color}"]`);
+  const mainImg = quickView.querySelector('.product__media img');
+  if (newImage && mainImg) {
+    mainImg.src = newImage.dataset.srcLarge || newImage.src;
+  }
 });
+
+// Still handle click for touch devices
+quickView.addEventListener('click', (e) => {
+  const swatch = e.target.closest('[data-variant-color]');
+  if (!swatch) return;
+
+  const color = swatch.dataset.variantColor;
+  const newImage = quickView.querySelector(`img[data-color="${color}"]`);
+  const mainImg = quickView.querySelector('.product__media img');
+  if (newImage && mainImg) {
+    mainImg.src = newImage.dataset.srcLarge || newImage.src;
+  }
+});
+
 
 
 }
