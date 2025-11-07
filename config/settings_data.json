@@ -312,6 +312,11 @@
         "type": "shopify://apps/stoq/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
         "disabled": false,
         "settings": {}
+      },
+      "7415279170309610466": {
+        "type": "shopify://apps/redirect-ninja-404/blocks/redirectNinja/15f69a74-676e-4b8f-b1c2-9bc09beacd98",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
