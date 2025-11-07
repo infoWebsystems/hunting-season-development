@@ -62,7 +62,7 @@
         "button_LcYWaa": {
           "type": "button",
           "settings": {
-            "link": "shopify://collections/best-sellers",
+            "link": "shopify://collections/new-arrivals-1",
             "link_text": "VIEW ALL"
           }
         }
