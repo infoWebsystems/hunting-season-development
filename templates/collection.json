@@ -20,12 +20,12 @@
             "title_size": 80,
             "subheading": "",
             "link": "",
-            "link_text": "Optional button",
+            "link_text": "",
             "link_2": "",
             "link_text_2": "",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Holiday-Banner.jpg",
+            "image": "shopify://shop_images/Untitled-1_75095465-4982-4f39-a7c3-e89239010c7a.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
