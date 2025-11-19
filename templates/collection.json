@@ -9,42 +9,6 @@
  */
 {
   "sections": {
-    "slideshow_9BEkYr": {
-      "type": "slideshow",
-      "blocks": {
-        "image_KJXaFN": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "",
-            "title_size": 80,
-            "subheading": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/Untitled-2_900c7861-5d02-4740-898c-3a688926eafa.jpg",
-            "image_mobile": "shopify://shop_images/Holiday-Mobile.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        }
-      },
-      "block_order": [
-        "image_KJXaFN"
-      ],
-      "name": "Hero (optional slideshow)",
-      "settings": {
-        "section_height": "650px",
-        "mobile_height": "auto",
-        "parallax": true,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5
-      }
-    },
     "collection-header": {
       "type": "collection-header",
       "settings": {
@@ -150,7 +114,6 @@
     }
   },
   "order": [
-    "slideshow_9BEkYr",
     "collection-header",
     "promo-grid",
     "main-collection",
