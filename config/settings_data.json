@@ -102,6 +102,14 @@
       "header": {
         "type": "header",
         "blocks": {
+          "announcement_czMjKk": {
+            "type": "announcement",
+            "settings": {
+              "text": "Save up to 35% off with code",
+              "link_text": "THANKFUL",
+              "link": "shopify://collections/thankful"
+            }
+          },
           "1524770014057": {
             "type": "logo",
             "settings": {
@@ -128,6 +136,7 @@
           }
         },
         "block_order": [
+          "announcement_czMjKk",
           "1524770014057",
           "1524770292306",
           "announcement_P3naKC"
