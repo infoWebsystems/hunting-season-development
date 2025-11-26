@@ -106,7 +106,7 @@
             "type": "announcement",
             "settings": {
               "text": "Save up to 35% off in our Thankful Collection",
-              "link_text": "",
+              "link_text": "Discount automatically applied in cart",
               "link": "shopify://collections/thankful"
             }
           },
