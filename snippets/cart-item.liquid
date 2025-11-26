@@ -108,16 +108,24 @@
           {%- endfor -%}
 
           {%- assign show_disclaimer = false -%}
+
+          {%- assign base_price = product.original_price -%}
+          {%- if base_price == 0 or base_price == blank -%}
+            {%- assign base_price = product.compare_at_price -%}
+          {%- endif -%}
+
           {%- for discount_allocation in product.line_level_discount_allocations -%}
-            {%- assign discount_percent = discount_allocation.amount | divided_by: product.original_price | times: 100 -%}
-            {%- if discount_percent >= 25 -%}
-              {%- assign show_disclaimer = true -%}
+            {%- if base_price > 0 -%}
+              {%- assign discount_percent = discount_allocation.amount | divided_by: base_price | times: 100 -%}
+              {%- if discount_percent >= 25 -%}
+                {%- assign show_disclaimer = true -%}
+              {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
 
           {%- if show_disclaimer -%}
-            <p class="cart-disclaimer" style="color:#7a4c3a; font-size:0.85em; margin-top:4px;">
-              Promotional items are eligible for exchange or store credit only.
+            <p class="cart__discount cart-disclaimer">
+              Pieces acquired at promotional pricing of 25% or greater may be exchanged or credited toward a future purchase.
             </p>
           {%- endif -%}
 
