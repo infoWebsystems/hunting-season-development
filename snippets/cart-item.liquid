@@ -105,6 +105,23 @@
             <small class="cart__discount">{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small>
           {%- endfor -%}
         {%- endif -%}
+{% assign show_disclaimer = false %}
+
+{% if product.line_level_discount_allocations != blank %}
+  {% for discount_allocation in product.line_level_discount_allocations %}
+    {% assign discount_percent = discount_allocation.amount | divided_by: product.original_price | times: 100 %}
+
+    {% if discount_percent >= 25 %}
+      {% assign show_disclaimer = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if show_disclaimer %}
+  <p class="cart-disclaimer" style="color:#a33; font-size:0.85em; margin:4px 0 0;">
+    Promitional items may be exchanged or returned for store credit only.
+  </p>
+{% endif %}
 
         {%- if product.unit_price_measurement -%}
           {%- capture unit_price_base_unit -%}
