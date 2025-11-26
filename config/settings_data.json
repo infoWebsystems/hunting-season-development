@@ -105,8 +105,8 @@
           "announcement_czMjKk": {
             "type": "announcement",
             "settings": {
-              "text": "Save up to 35% off with code",
-              "link_text": "THANKFUL",
+              "text": "Save up to 35% off in our Thankful Collection",
+              "link_text": "",
               "link": "shopify://collections/thankful"
             }
           },
