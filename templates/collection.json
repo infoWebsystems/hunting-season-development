@@ -99,7 +99,7 @@
       "type": "email_gate",
       "disabled": true,
       "settings": {
-        "collection": "sale",
+        "collection": "sale-2",
         "logo": "shopify://shop_images/LOGO.jpg",
         "form_url": "https://hunting-season.us11.list-manage.com/subscribe/post?u=844fcaaf773f3baca7882f436&id=c961ad667f&f_id=007411e1f0",
         "skip_for_registered": true,
