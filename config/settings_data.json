@@ -102,6 +102,14 @@
       "header": {
         "type": "header",
         "blocks": {
+          "announcement_LdPHwz": {
+            "type": "announcement",
+            "settings": {
+              "text": "To ensure Christmas Delivery, order by 12/17 with Ground or 12/19 with Express",
+              "link_text": "",
+              "link": ""
+            }
+          },
           "1524770014057": {
             "type": "logo",
             "settings": {
@@ -112,6 +120,7 @@
           },
           "1524770292306": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "Join our community for early access to Holiday exclusives",
               "link_text": "Subscribe",
@@ -128,6 +137,7 @@
           }
         },
         "block_order": [
+          "announcement_LdPHwz",
           "1524770014057",
           "1524770292306",
           "announcement_P3naKC"
