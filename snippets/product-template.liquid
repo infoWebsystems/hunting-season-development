@@ -1,4 +1,4 @@
- liquid
+ {%- liquid
   assign current_variant = product.selected_or_first_available_variant
 
   unless thumbnail_position
@@ -25,6 +25,7 @@
 
   assign product_img_structure = product.featured_media | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
 -%}
+
 
 <div id="ProductSection-{{ section_id }}-{{ product.id }}"
         class="product-section"
