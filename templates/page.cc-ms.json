@@ -20,14 +20,14 @@
         "163615915167a8dd7f-0": {
           "type": "heading",
           "settings": {
-            "title": "Text Us"
+            "title": "our standards"
           }
         },
         "163615915167a8dd7f-1": {
           "type": "text",
           "settings": {
-            "enlarge_text": false,
-            "text": "<p>ALL INQUIRIES:  (855) 603-2681</p><p></p><p></p>"
+            "enlarge_text": true,
+            "text": "<p>At Hunting Season, we are committed to responsible craftsmanship and ethical partnerships. We work closely with our artisan and manufacturing partners to ensure safe and healthy working conditions, fair wages, and respect for all individuals.</p><p>We hold ourselves and our partners to the highest standards of integrity and transparency, with zero tolerance for forced or child labor and a strong belief in open, honest business practices.</p><p>For more information, or to request a copy of our full Partner Code of Conduct, please fill out the form below or contact us at support@hunting-season.com</p><p></p><p></p>"
           }
         }
       },
@@ -47,14 +47,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "email Us"
+            "title": "Modern Slavery & Ethical Sourcing Statement"
           }
         },
         "text": {
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>Get in touch using the form below.</p>"
+            "text": "<p>At Hunting Season, we are committed to ensuring that modern slavery, human trafficking, and forced labor have no place in our business or supply chain.</p><p>While we are not legally required under U.S., UK, Australian, or EU thresholds to publish a Modern Slavery Statement at our current scale, we believe in taking responsibility and being transparent as we grow.</p><p>Our products are crafted in small workshops in Colombia and Spain, using responsibly sourced materials including leathers, natural fibers such as Iraca and Fique, and vegetable-ivory Tagua seeds. We also source select materials such as satin and leathers from Italy. We work directly with artisanal cooperatives and family-owned ateliers to maintain close oversight and fair working conditions.</p><p>As a next step, we are developing a Supplier Code of Conduct and strengthening our due diligence processes to increase transparency across our supply chain.</p><p>This statement reflects our commitment to ethical practices and respect for the people and communities who make our collections possible.</p><p>For more information, or to request a copy of our Modern Slavery Statement, please fill out the form below or contact us at support@hunting-season.com</p>"
           }
         }
       },
