@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="{{ settings.color_button }}">
 
-  {%- comment -%}
-    HS FIX: Strip query params from canonical (prevents ?page= etc being canonical)
-  {%- endcomment -%}
+  <!-- HS FIX: canonical without query params -->
   <link rel="canonical" href="{{ canonical_url | split:'?' | first }}">
 
   <link rel="preconnect" href="https://cdn.shopify.com">
@@ -25,7 +23,7 @@
   {%- render 'seo-title' -%}
 
   {%- if page_description -%}
-  <meta name="description" content="{{ page_description | escape }}">
+    <meta name="description" content="{{ page_description | escape }}">
   {%- endif -%}
 
   {%- render 'social-meta-tags' -%}
@@ -36,18 +34,27 @@
   {%- render 'css-variables' -%}
   {% render 'revenueRoll-GTM' %}
 
-  {%- comment -%}
-    HS FIX: Redirect /collections/*?page=... to the base collection URL.
-    Shopify can't do this in admin redirects because query strings aren't supported there.
-  {%- endcomment -%}
-  {% if request.path contains '/collections/' and request.query_string contains 'page=' %}
-    <script>
-      (function () {
-        // request.path is already the clean path, e.g. "/collections/shop-all"
-        window.location.replace("{{ request.path }}");
-      })();
-    </script>
-  {% endif %}
+  <!-- HS FIX: strip ?page= from collection URLs (robust JS version) -->
+  <script>
+    (function () {
+      try {
+        var url = new URL(window.location.href);
+
+        // Only run on collection pages
+        if (url.pathname.indexOf('/collections/') === 0) {
+          if (url.searchParams && url.searchParams.has('page')) {
+            // Remove ONLY the pagination param
+            url.searchParams.delete('page');
+
+            var qs = url.searchParams.toString();
+            var cleanUrl = url.pathname + (qs ? ('?' + qs) : '');
+
+            window.location.replace(cleanUrl);
+          }
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -136,82 +143,69 @@
 {% include 'swymSnippet' %}
 <script> window.addEventListener("load", (event) => { setTimeout(() => { let aioa_script_tag = document.createElement("script"); aioa_script_tag.src = "https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#420083&token=ADAAIOA-2ECA5E4060DB2A8C4B5B612761061C8B&position=bottom_right"; aioa_script_tag.id = "aioa-adawidget"; document.getElementsByTagName("body")[0].appendChild(aioa_script_tag); }, 3000)}); </script>
 
-
 <!-- Back in Stock helper snippet -->
 {% render 'back-in-stock-helper' %}
 <!-- End Back in Stock helper snippet -->
- {% include 'smile-initializer' %}
+{% include 'smile-initializer' %}
 
 <script defer src="https://static.shopmy.us/Affiliates/sms_aff_clicktrack-huntingseason.js"></script>
 
-<!-- HS – Popular Search Suggestions (final) -->
+<!-- HS – Popular Search Suggestions -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // Curated terms
   const TERMS = ["Gifts","Soft Clutch","Top Handle","Lighter","Pendant","Opera"];
-
-  // Find search inputs in header / drawer / modal
   const inputs = document.querySelectorAll(
     'input[type="search"][name="q"], input[name="q"][role="searchbox"]'
   );
   if (!inputs.length) return;
 
   inputs.forEach((input) => {
-    // Anchor dropdown to the closest search <form>, fallback to parent
     const anchor = input.closest("form") || input.parentElement;
     if (!anchor) return;
 
-    // Ensure the anchor can position an absolutely placed dropdown
     if (getComputedStyle(anchor).position === "static") {
       anchor.style.position = "relative";
     }
 
-    // Build dropdown container
     const box = document.createElement("div");
     box.className = "hs-popular";
     box.style.display = "none";
     box.setAttribute("role", "listbox");
 
-    // Read the form's action and ALL its inputs (hidden + visible)
-    const action = (anchor.getAttribute("action")) || "/search";
+    const action = anchor.getAttribute("action") || "/search";
     const baseParams = new URLSearchParams();
     const fd = new FormData(anchor);
     for (const [k, v] of fd.entries()) baseParams.set(k, v);
 
-    // Build list markup using the form's params; override only q
     const listHTML = TERMS.map((t) => {
-      const params = new URLSearchParams(baseParams); // clone per item
+      const params = new URLSearchParams(baseParams);
       params.set("q", t);
-      const url = `${action}?${params.toString()}`;
-      return `<li class="hs-popular__item"><a class="hs-popular__link" href="${url}">${t}</a></li>`;
+      return `<li class="hs-popular__item"><a class="hs-popular__link" href="${action}?${params.toString()}">${t}</a></li>`;
     }).join("");
 
     box.innerHTML = `
       <div class="hs-popular__title">Popular Searches</div>
-      <ul class="hs-popular__list">
-        ${listHTML}
-      </ul>
+      <ul class="hs-popular__list">${listHTML}</ul>
     `;
     anchor.appendChild(box);
 
-    // Show ONLY when input is empty + focused
     const update = () => {
-      const shouldShow = document.activeElement === input && input.value.trim() === "";
-      box.style.display = shouldShow ? "block" : "none";
+      box.style.display =
+        document.activeElement === input && input.value.trim() === ""
+          ? "block"
+          : "none";
     };
     input.addEventListener("focus", update);
     input.addEventListener("input", update);
 
-    // Hide when clicking outside the dropdown/input
     document.addEventListener("click", (e) => {
       if (!box.contains(e.target) && e.target !== input) box.style.display = "none";
     });
 
-    // Keep clicks inside the dropdown from blurring the input immediately
     box.addEventListener("mousedown", (e) => e.preventDefault());
   });
 });
 </script>
-<!-- /HS – Popular Search Suggestions -->
 </body>
 </html>
+
