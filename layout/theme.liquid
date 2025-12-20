@@ -5,7 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="{{ settings.color_button }}">
-  <link rel="canonical" href="{{ canonical_url }}">
+
+  {%- comment -%}
+    HS FIX: Strip query params from canonical (prevents ?page= etc being canonical)
+  {%- endcomment -%}
+  <link rel="canonical" href="{{ canonical_url | split:'?' | first }}">
+
   <link rel="preconnect" href="https://cdn.shopify.com">
   <link rel="preconnect" href="https://fonts.shopifycdn.com">
   <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
@@ -30,6 +35,19 @@
   {{ 'cart-upsells.css' | asset_url | stylesheet_tag }}
   {%- render 'css-variables' -%}
   {% render 'revenueRoll-GTM' %}
+
+  {%- comment -%}
+    HS FIX: Redirect /collections/*?page=... to the base collection URL.
+    Shopify can't do this in admin redirects because query strings aren't supported there.
+  {%- endcomment -%}
+  {% if request.path contains '/collections/' and request.query_string contains 'page=' %}
+    <script>
+      (function () {
+        // request.path is already the clean path, e.g. "/collections/shop-all"
+        window.location.replace("{{ request.path }}");
+      })();
+    </script>
+  {% endif %}
 
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
