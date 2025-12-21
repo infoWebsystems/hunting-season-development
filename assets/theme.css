@@ -11812,3 +11812,15 @@ select, .select, .facets__select {
 }
 
 .hs-popular__link:hover{ background:#f7f7f7; }
+
+/* Pandectes GDPR – prevent banner from being LCP */
+.cc-window,
+.cc-banner,
+#cookieconsent {
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 35vh;
+  z-index: 2147483647;
+}
