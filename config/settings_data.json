@@ -102,14 +102,6 @@
       "header": {
         "type": "header",
         "blocks": {
-          "announcement_LdPHwz": {
-            "type": "announcement",
-            "settings": {
-              "text": "",
-              "link_text": "",
-              "link": ""
-            }
-          },
           "1524770014057": {
             "type": "logo",
             "settings": {
@@ -137,7 +129,6 @@
           }
         },
         "block_order": [
-          "announcement_LdPHwz",
           "1524770014057",
           "1524770292306",
           "announcement_P3naKC"
