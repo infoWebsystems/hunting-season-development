@@ -48,7 +48,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "New Arrivals",
-        "home_featured_products": "new-arrivals-1",
+        "home_featured_products": "new-arrivals",
         "per_row": 5,
         "rows": 2,
         "mobile_scrollable": true,
@@ -62,7 +62,7 @@
         "button_LcYWaa": {
           "type": "button",
           "settings": {
-            "link": "shopify://collections/new-arrivals-1",
+            "link": "shopify://collections/new-arrivals",
             "link_text": "VIEW ALL"
           }
         }
