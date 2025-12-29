@@ -11824,10 +11824,3 @@ select, .select, .facets__select {
   max-height: 35vh;
   z-index: 2147483647;
 }
-[data-type_header_capitalize=true] h1 {
-  text-transform: none;
-}
-.product-card__title,
-.product-title {
-  text-transform: none;
-}
