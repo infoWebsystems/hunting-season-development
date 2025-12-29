@@ -11827,3 +11827,7 @@ select, .select, .facets__select {
 [data-type_header_capitalize=true] h1 {
   text-transform: none;
 }
+.product-card__title,
+.product-title {
+  text-transform: none;
+}
