@@ -11,7 +11,6 @@
   "sections": {
     "16367381423999b32e": {
       "type": "rich-text",
-      "disabled": true,
       "blocks": {
         "1636738142be13b9f4-0": {
           "type": "heading",
@@ -31,6 +30,7 @@
         "1636738142be13b9f4-0",
         "1636738142be13b9f4-1"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -93,7 +93,7 @@
         "collection4": {
           "type": "collection",
           "settings": {
-            "collection": "woven",
+            "collection": "artisanal-raffia",
             "title": "",
             "focal_point": "center center"
           }
