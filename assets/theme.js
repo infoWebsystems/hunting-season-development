@@ -7011,7 +7011,6 @@ if (quickView) {
 
         this.initImageZoom();
 
-
         // var sizedImgUrl = theme.Images.getSizedImageUrl(variant.featured_media.preview_image.src, this.settings.imageSize);
         //
         // var newImage = this.container.querySelector('.product__thumb[data-id="' + variant.featured_media.id + '"]');
