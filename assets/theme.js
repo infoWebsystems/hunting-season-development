@@ -6993,10 +6993,10 @@ if (quickView) {
     return;
   }
 
-  const hasImageSet = variant.featured_media.alt && variant.featured_media.alt.includes('#');
+  const hasImageSet = variant.featured_media.alt && variant.featured_media.alt.includes(`#`);
   
   if (hasImageSet && this.settings.imageSetName) {
-    const current_group = variant.featured_media.alt.substring(variant.featured_media.alt.indexOf('#') + 1);
+    const current_group = variant.featured_media.alt.substring(variant.featured_media.alt.indexOf(`#`) + 1);
     
     theme.swiper.removeAllSlides();
     const slides = [];
