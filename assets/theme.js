@@ -6993,11 +6993,9 @@ if (quickView) {
     return;
   }
 
-  // Check if using image set feature (alt text contains #)
   const hasImageSet = variant.featured_media.alt && variant.featured_media.alt.includes('#');
   
   if (hasImageSet && this.settings.imageSetName) {
-    // OLD METHOD: Image Set Mode - Use alt text grouping
     const current_group = variant.featured_media.alt.substring(variant.featured_media.alt.indexOf('#') + 1);
     
     theme.swiper.removeAllSlides();
@@ -7013,7 +7011,6 @@ if (quickView) {
     theme.swiper.update();
     setTimeout(() => theme.swiper.slideTo(0), 10);
   } else {
-    // NEW METHOD: Media ID Mode - Use Shopify's featured_media.id
     const mediaId = variant.featured_media.id;
     const targetSlide = this.cache.mainSlider.querySelector(`[data-media-id="${mediaId}"]`);
     
