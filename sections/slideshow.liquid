@@ -164,7 +164,7 @@
                     <div class="parallax-image">
                 {%- endif -%}
 
-                  {%- if block.settings.image != blank -%}
+                {%- if block.settings.image != blank -%}
   {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
   {%- assign is_first_slide = false -%}
   {%- if forloop.first -%}
@@ -176,24 +176,27 @@
     data-aspectratio="{{ block.settings.image.aspect_ratio }}"
     alt="{{ block.settings.image.alt | escape }}"
     style="object-position: {{ block.settings.focal_point }}">
-                    <noscript>
-                      <img class="hero__image hero__image--{{ block.id }}"
-                        src="{{ block.settings.image | img_url: '1400x' }}"
-                        alt="{{ block.settings.image.alt | escape }}">
-                    </noscript>
-                  {%- else -%}
-                    {%- if template == 'password' -%}
-                      {%- assign password_image = 'password-page-background.jpg' | asset_url -%}
-                      <img class="hero__image lazyload" src="{{ password_image }}">
-                    {%- else -%}
-                      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
-                    {%- endif -%}
-                  {%- endif -%}
-
-                {%- if section.settings.parallax -%}
-                    </div>
-                  </div>
-                {%- endif -%}
+  {%- if has_mobile_image -%}
+    {%- assign img_url_mobile = block.settings.image_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img class="hero__image hero__image--{{ block.id }}{% unless is_first_slide %} lazyload{% endunless %} medium-up--hide"
+      {% if is_first_slide %}src="{{ block.settings.image_mobile | img_url: '1200x' }}" loading="eager" fetchpriority="high"{% else %}src="{{ block.settings.image_mobile | img_url: '300x' }}" data-src="{{ img_url_mobile }}" data-sizes="auto"{% endif %}
+      data-aspectratio="{{ block.settings.image_mobile.aspect_ratio }}"
+      alt="{{ block.settings.image_mobile.alt | escape }}"
+      style="object-position: {{ block.settings.focal_point }}">
+  {%- endif -%}
+  <noscript>
+    <img class="hero__image hero__image--{{ block.id }}"
+      src="{{ block.settings.image | img_url: '1400x' }}"
+      alt="{{ block.settings.image.alt | escape }}">
+  </noscript>
+{%- else -%}
+  {%- if template == 'password' -%}
+    {%- assign password_image = 'password-page-background.jpg' | asset_url -%}
+    <img class="hero__image lazyload" src="{{ password_image }}">
+  {%- else -%}
+    {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+  {%- endif -%}
+{%- endif -%}
               </div>
 
               {%- if link_slide -%}
