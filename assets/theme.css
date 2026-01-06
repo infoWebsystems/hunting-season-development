@@ -11833,3 +11833,12 @@ h1, .h1, h2, .h2, h3, .h3,
     text-transform: none !important;
     letter-spacing: 0.02em;
 }
+/* Surgical fix for Product Grid Titles */
+.grid-view-item__title, 
+.product-card__title, 
+.h4, 
+.grid-product__title {
+    text-transform: none !important;
+    font-variant: normal !important;
+    letter-spacing: 0.05em !important;
+}
