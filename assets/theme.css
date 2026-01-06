@@ -11882,3 +11882,13 @@ h2, .h2 {
     letter-spacing: 0.02em;
   }
 }
+/* Optimized for 3-word stability and balanced breaks */
+.grid-view-item__title, .product-card__title, .grid-product__title {
+    text-wrap: balance !important;
+    line-height: 1.4 !important;
+    min-height: 3em; 
+    max-width: 95%;      /* Increased from 90% to allow more words per line */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    word-spacing: -0.02em; /* Subtle tightening to help fit that 3rd word */
+}
