@@ -11882,13 +11882,15 @@ h2, .h2 {
     letter-spacing: 0.02em;
   }
 }
-/* Precise adjustment to fit 3 words on the top line */
+/* Restoring size for readability while maintaining balance */
 .grid-view-item__title, .product-card__title, .grid-product__title {
-    text-wrap: balance !important;
-    line-height: 1.4 !important;
-    min-height: 3em; 
-    max-width: 100% !important; /* Uses every pixel of available width */
-    font-size: 13px !important;  /* Slightly smaller to fit more characters */
-    letter-spacing: -0.01em !important; /* Tightens the 'air' between letters */
-    margin-bottom: 5px;
+    text-wrap: balance !important;    /* Distributes words evenly across lines */
+    font-size: 15px !important;       /* The 'sweet spot' for luxury titles */
+    line-height: 1.5 !important;      /* Adds premium 'air' */
+    min-height: 3.2em;                /* Keeps the 'Add to Cart' buttons aligned */
+    max-width: 85%;                   /* Intentionally narrows the box to encourage 2-3 word breaks */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-weight: 400;                 /* Not too thin, not too bold */
+    letter-spacing: 0.02em;           /* Slight expansion for an expensive look */
 }
