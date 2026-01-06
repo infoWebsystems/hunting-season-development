@@ -11875,3 +11875,10 @@ h2, .h2 {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+@media only screen and (max-width: 749px) {
+  .grid-view-item__title, .product-card__title {
+    font-size: 14px !important;
+    font-weight: 300; /* Thinner weight for mobile screens */
+    letter-spacing: 0.02em;
+  }
+}
