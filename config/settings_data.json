@@ -273,27 +273,6 @@
         "disabled": false,
         "settings": {}
       },
-      "5888675206956468567": {
-        "type": "shopify://apps/loop-returns-exchanges/blocks/onstore/e32ccd84-40d6-4b16-98bf-b6b9da010afd",
-        "disabled": false,
-        "settings": {
-          "show-onstore-bar": true,
-          "api-key": "0650e1bdcae831a09b07f010d98d01b61c57635a",
-          "checkout-selector": ".cart__checkout",
-          "replace-checkout-button": false,
-          "preserve-cart": false,
-          "available-credit-bar-label": "in available credit",
-          "available-credit-bar-mobile-label": "credit",
-          "bar-value-font-size": "15",
-          "bar-label-font-size": "10",
-          "bar-button-font-size": "10",
-          "bottom-bar-alignment": "full",
-          "bar-color": "#000000",
-          "bar-text-color": "#ffffff",
-          "bump-side-cart": true,
-          "side-cart-selector": "#CartDrawer"
-        }
-      },
       "15351435345818755577": {
         "type": "shopify://apps/pandectes-gdpr/blocks/banner/58c0baa2-6cc1-480c-9ea6-38d6d559556a",
         "disabled": false,
@@ -318,6 +297,28 @@
         "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": false,
         "settings": {}
+      },
+      "5888675206956468567": {
+        "type": "shopify://apps/loop-returns-exchanges/blocks/onstore/e32ccd84-40d6-4b16-98bf-b6b9da010afd",
+        "disabled": false,
+        "settings": {
+          "show-onstore-bar": true,
+          "api-key": "0650e1bdcae831a09b07f010d98d01b61c57635a",
+          "checkout-selector": ".cart__checkout",
+          "replace-checkout-button": false,
+          "cart-details": true,
+          "preserve-cart": false,
+          "available-credit-bar-label": "in available credit",
+          "available-credit-bar-mobile-label": "credit",
+          "bar-value-font-size": "15",
+          "bar-label-font-size": "10",
+          "bar-button-font-size": "10",
+          "bottom-bar-alignment": "full",
+          "bar-color": "#000000",
+          "bar-text-color": "#ffffff",
+          "bump-side-cart": true,
+          "side-cart-selector": "#CartDrawer"
+        }
       }
     }
   },
