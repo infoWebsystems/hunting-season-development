@@ -278,11 +278,6 @@
         "disabled": false,
         "settings": {}
       },
-      "7415279170309610466": {
-        "type": "shopify://apps/redirect-ninja-404/blocks/redirectNinja/15f69a74-676e-4b8f-b1c2-9bc09beacd98",
-        "disabled": false,
-        "settings": {}
-      },
       "5888675206956468567": {
         "type": "shopify://apps/loop-returns-exchanges/blocks/onstore/e32ccd84-40d6-4b16-98bf-b6b9da010afd",
         "disabled": false,
@@ -312,11 +307,16 @@
       },
       "2200952712151285029": {
         "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
-        "disabled": true,
+        "disabled": false,
         "settings": {}
       },
       "2567389343055140935": {
         "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+        "disabled": false,
+        "settings": {}
+      },
+      "7415279170309610466": {
+        "type": "shopify://apps/redirect-ninja-404/blocks/redirectNinja/15f69a74-676e-4b8f-b1c2-9bc09beacd98",
         "disabled": true,
         "settings": {}
       }
