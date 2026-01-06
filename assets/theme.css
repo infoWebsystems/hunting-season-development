@@ -11854,3 +11854,15 @@ h2, .h2 {
     line-height: 1.4;
     margin-top: 12px;
 }
+/* Disable hyphenation for a cleaner, more premium reading experience */
+* {
+    hyphens: none !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+}
+
+/* Ensure product titles wrap elegantly without splitting words */
+.grid-view-item__title, .product-card__title, .grid-product__title {
+    hyphens: none !important;
+    word-wrap: normal !important;
+}
