@@ -11824,3 +11824,8 @@ select, .select, .facets__select {
   max-height: 35vh;
   z-index: 2147483647;
 }
+/* Override forced uppercase for a more editorial, luxury feel */
+h1, .h1, h2, .h2, h3, .h3 {
+    text-transform: none !important;
+    letter-spacing: 0.02em; /* Optional: adds a touch of premium spacing */
+}
