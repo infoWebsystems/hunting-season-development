@@ -11866,3 +11866,12 @@ h2, .h2 {
     hyphens: none !important;
     word-wrap: normal !important;
 }
+/* Final Typography Polish for Understated Elegance */
+.grid-view-item__title, .product-card__title, .grid-product__title {
+    text-wrap: balance !important;      /* Prevents single-word 'orphans' */
+    line-height: 1.5 !important;        /* Adds premium 'air' between lines */
+    min-height: 3.2em;                  /* Keeps the grid perfectly aligned */
+    max-width: 90%;                     /* Centers the text comfortably */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
