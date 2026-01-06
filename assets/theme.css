@@ -11842,3 +11842,15 @@ h1, .h1, h2, .h2, h3, .h3,
     font-variant: normal !important;
     letter-spacing: 0.05em !important;
 }
+/* Balancing the hierarchy for a high-end feel */
+h2, .h2 {
+    font-size: 1.4rem !important; /* Shrinks the 'Master Craftsmanship' header */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.grid-view-item__title, .product-card__title {
+    font-size: 13px !important; /* Makes product labels more delicate */
+    line-height: 1.4;
+    margin-top: 12px;
+}
