@@ -69,10 +69,6 @@
     "main-collection": {
       "type": "main-collection",
       "blocks": {
-        "collection_description": {
-          "type": "collection_description",
-          "settings": {}
-        },
         "product_grid": {
           "type": "product_grid",
           "settings": {
@@ -81,11 +77,15 @@
             "rows_per_page": 20,
             "mobile_flush_grid": true
           }
+        },
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
         }
       },
       "block_order": [
-        "collection_description",
-        "product_grid"
+        "product_grid",
+        "collection_description"
       ],
       "settings": {
         "enable_sidebar": true,
