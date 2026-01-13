@@ -12,6 +12,13 @@
         </div>
         <div class="grid__item medium-up--four-fifths grid__item--content">
           <div class="collection-grid__wrapper">
+
+            {% if collection.metafields.custom.sale_collection_disclaimer != blank %}
+              <div class="collection-sale-disclaimer">
+                {{ collection.metafields.custom.sale_collection_disclaimer | metafield_tag }}
+              </div>
+            {% endif %}
+
             {% render 'collection-template', section: section %}
           </div>
         </div>
