@@ -173,7 +173,7 @@
             "type": "newsletter",
             "settings": {
               "show_footer_title": true,
-              "title": "STAY IN THE KNOW",
+              "title": "Follow the Craft",
               "text": "<p>Enjoy $75 off your first $400 order when you join our community and gain priority access to new collections and brand updates</p>",
               "container_width": 33
             }
