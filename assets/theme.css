@@ -11894,3 +11894,29 @@ h2, .h2 {
     font-weight: 400;                 /* Not too thin, not too bold */
     letter-spacing: 0.02em;           /* Slight expansion for an expensive look */
 }
+/* === Match Shopify Inbox to Klaviyo Form === */
+
+.shopify-chat,
+.shopify-chat iframe {
+  font-family: Montserrat, Arial, sans-serif !important;
+}
+
+/* Chat window geometry */
+.shopify-chat iframe {
+  border-radius: 0 !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12) !important;
+}
+
+/* Inputs inside chat */
+.shopify-chat input,
+.shopify-chat textarea {
+  height: 50px !important;
+  border-radius: 0 !important;
+  border-color: #979797 !important;
+  font-size: 14px !important;
+}
+
+/* Placeholder color */
+.shopify-chat input::placeholder {
+  color: #767676 !important;
+}
