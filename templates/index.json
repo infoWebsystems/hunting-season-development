@@ -26,7 +26,7 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/Resort26-landing-opera.jpg",
-            "image_mobile": "shopify://shop_images/Basket-Mobile_0b2ba4e3-ed58-498c-ae7c-0c6d84409f5d.jpg",
+            "image_mobile": "shopify://shop_images/Resort26-mobile-opera.jpg",
             "overlay_opacity": 0,
             "focal_point": "center center"
           }
