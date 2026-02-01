@@ -16,6 +16,13 @@
       <div class="product__main-photos swiper" data-aos data-product-single-media-group>
         <div data-product-photos class="product-slideshow swiper-wrapper">
           {%- for media in product.media -%}
+            {%- comment -%}
+              IMPORTANT:
+              Each media item must output a swiper-slide wrapper.
+              If your existing snippets/media.liquid does NOT include swiper-slide,
+              replace snippets/media.liquid with the wrapper shim provided below.
+            {%- endcomment -%}
+
             {%- render 'media',
               section_id: section_id,
               media: media,
@@ -48,6 +55,10 @@
           </button>
         {%- endif -%}
 
+        {%- comment -%} Instagram-style dots {%- endcomment -%}
+        <div class="swiper-pagination product-media__dots"></div>
+
+        {%- comment -%} Keep existing scrollbar {%- endcomment -%}
         <div class="swiper-scrollbar"></div>
       </div>
 
@@ -134,6 +145,41 @@
   <script type="application/json" id="ModelJson-{{ section_id }}">
     {{ product.media | where: 'media_type', 'model' | json }}
   </script>
+
+  <script>
+    (function () {
+      var root = document.querySelector('[data-product-images] .product__main-photos.swiper');
+      if (!root) return;
+
+      // avoid double init
+      if (root.swiper) return;
+
+      // Only init when there is more than one slide
+      var slideCount = root.querySelectorAll('.swiper-slide').length;
+      if (slideCount <= 1) return;
+
+      var paginationEl = root.querySelector('.swiper-pagination');
+      var scrollbarEl = root.querySelector('.swiper-scrollbar');
+
+      new Swiper(root, {
+        slidesPerView: 1,
+        watchOverflow: true,
+        observer: true,
+        observeParents: true,
+
+        pagination: paginationEl ? {
+          el: paginationEl,
+          clickable: true
+        } : undefined,
+
+        scrollbar: scrollbarEl ? {
+          el: scrollbarEl,
+          draggable: true
+        } : undefined
+      });
+    })();
+  </script>
+
 {%- else -%}
   <div class="product__photos product__photos-{{ section_id }}">
     <div class="product__main-photos" style="width: 100%">
