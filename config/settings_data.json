@@ -877,7 +877,7 @@
       "body:has(.loop-onstore) #shopify-chat inbox-online-store-chat {bottom: 90px !important;}",
       "body:has(.loop-onstore) .product-block.sticky {bottom: 65px;}",
       "body:has(.loop-onstore):has(.product-block.sticky) #shopify-chat inbox-online-store-chat {bottom: 210px !important;}",
-      ".product-media__dots {display: flex !important;}"
+      "/* Ensure PDP image dots are visible (mobile + desktop) */.product-media__dots {display: flex !important;}"
     ]
   }
 }
