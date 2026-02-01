@@ -7076,7 +7076,7 @@ if (quickView) {
 
         // this.flickity = new theme.Slideshow(this.cache.mainSlider, mainSliderArgs);
 
-       theme.swiper = new Swiper('.swiper', {
+       theme.swiper = new Swiper('.product__main-photos.swiper', {
   direction: 'horizontal',
 
   // Stop the “infinite” feeling on mobile
@@ -7090,9 +7090,9 @@ if (quickView) {
     forceToAxis: true
   },
 
-  // Dots (pagination)
+  // Dots (pagination) - bind to the dots inside the PDP gallery
   pagination: {
-    el: '.swiper-pagination',
+    el: '.product-media__dots',
     clickable: true
   },
 
@@ -7108,13 +7108,13 @@ if (quickView) {
 
   breakpoints: {
     769: {
-      // keep your desktop behavior
       loop: false,
       cssMode: true,
       direction: 'vertical'
     }
   }
 });
+
 
 
         this.cache.productSlides || (this.cache.productSlides = Array.from(theme.swiper.slides).map(slide => slide.cloneNode(true)));
