@@ -877,7 +877,8 @@
       "body:has(.loop-onstore) #shopify-chat inbox-online-store-chat {bottom: 90px !important;}",
       "body:has(.loop-onstore) .product-block.sticky {bottom: 65px;}",
       "body:has(.loop-onstore):has(.product-block.sticky) #shopify-chat inbox-online-store-chat {bottom: 210px !important;}",
-      "/* Ensure PDP image dots are visible (mobile + desktop) */.product-media__dots {display: flex !important;}"
+      " /* Ensure PDP image dots are visible (mobile + desktop) */.product-media__dots {display: flex !important;}",
+      "/* Center PDP Swiper dots */.product-media__dots {display: flex !important; justify-content: center !important; align-items: center; width: 100%; margin-left: auto; margin-right: auto; text-align: center;}"
     ]
   }
 }
