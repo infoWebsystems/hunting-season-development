@@ -7076,30 +7076,46 @@ if (quickView) {
 
         // this.flickity = new theme.Slideshow(this.cache.mainSlider, mainSliderArgs);
 
-        theme.swiper = new Swiper('.swiper', {
-          direction: 'horizontal',
-          loop: true,
-          releaseOnEdges: true,
-          mousewheel: {
-            enabled: true,
-            forceToAxis: true
-          },
-          scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true
-          },
-          on: {
-            init: this.onSliderInit.bind(this),
-            update: this.onSlideChange.bind(this)
-          },
-          breakpoints: {
-            769: {
-              loop: false,
-              cssMode: true,
-              direction: 'vertical'
-            }
-          }
-        });
+       theme.swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+
+  // Stop the “infinite” feeling on mobile
+  loop: false,
+  rewind: false,
+  watchOverflow: true,
+
+  releaseOnEdges: true,
+  mousewheel: {
+    enabled: true,
+    forceToAxis: true
+  },
+
+  // Dots (pagination)
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
+  },
+
+  on: {
+    init: this.onSliderInit.bind(this),
+    update: this.onSlideChange.bind(this)
+  },
+
+  breakpoints: {
+    769: {
+      // keep your desktop behavior
+      loop: false,
+      cssMode: true,
+      direction: 'vertical'
+    }
+  }
+});
+
 
         this.cache.productSlides || (this.cache.productSlides = Array.from(theme.swiper.slides).map(slide => slide.cloneNode(true)));
         this.updateVariantImage({detail: {variant: this.variants.currentVariant}});
