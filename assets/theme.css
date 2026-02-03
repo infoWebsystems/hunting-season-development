@@ -11928,3 +11928,8 @@ h2, .h2 {
     object-position: center 80%;
   }
 }
+@media (max-width: 768px) {
+  .template-product .product__main-photos {
+    outline: 4px solid red !important;
+  }
+}
