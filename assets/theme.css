@@ -11920,12 +11920,4 @@ h2, .h2 {
 .shopify-chat input::placeholder {
   color: #767676 !important;
 }
-/* PDP mobile: force hero crop to show lower part of image (TEST) */
-@media (max-width: 768px) {
-  .template-product .product__main-photos img,
-  .template-product .product__main-photos picture img {
-    object-fit: cover !important;
-    object-position: center 88% !important;
-  }
-}
 
