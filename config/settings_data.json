@@ -878,9 +878,10 @@
       "body:has(.loop-onstore) .product-block.sticky {bottom: 65px;}",
       "body:has(.loop-onstore):has(.product-block.sticky) #shopify-chat inbox-online-store-chat {bottom: 210px !important;}",
       " /* Ensure PDP image dots are visible (mobile + desktop) */.product-media__dots {display: flex !important;}",
-      "/* Center PDP Swiper dots */.product-media__dots {display: flex !important; justify-content: center !important; align-items: center; width: 100%; margin-left: auto; margin-right: auto; text-align: center;}",
-      "/* PDP dots – black instead of blue */.product-media__dots .swiper-pagination-bullet {background-color: #000 !important; opacity: 0.3; /* inactive dots */}",
-      ".product-media__dots .swiper-pagination-bullet-active {background-color: #000 !important; opacity: 1;}"
+      " /* Center PDP Swiper dots */.product-media__dots {display: flex !important; justify-content: center !important; align-items: center; width: 100%; margin-left: auto; margin-right: auto; text-align: center;}",
+      " /* PDP dots – black instead of blue */.product-media__dots .swiper-pagination-bullet {background-color: #000 !important; opacity: 0.3; /* inactive dots */}",
+      ".product-media__dots .swiper-pagination-bullet-active {background-color: #000 !important; opacity: 1;}",
+      "/* Hide PDP image dots on desktop, keep on mobile */@media (min-width: 750px) {.product-media__dots {display: none !important; }}"
     ]
   }
 }
