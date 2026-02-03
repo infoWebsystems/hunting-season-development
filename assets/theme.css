@@ -11920,4 +11920,20 @@ h2, .h2 {
 .shopify-chat input::placeholder {
   color: #767676 !important;
 }
+/* PDP mobile: force a crop window on the active slide (safe for Swiper) */
+@media (max-width: 768px) {
+  .template-product .product__main-photos .swiper-slide-active {
+    height: 72vh !important;     /* tune 65–80vh */
+    overflow: hidden !important;
+  }
+
+  .template-product .product__main-photos .swiper-slide-active img,
+  .template-product .product__main-photos .swiper-slide-active picture img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 85% !important; /* bias downward */
+    display: block;
+  }
+}
 
