@@ -11920,11 +11920,4 @@ h2, .h2 {
 .shopify-chat input::placeholder {
   color: #767676 !important;
 }
-/* PDP mobile: create a safe crop window for the gallery */
-@media (max-width: 768px) {
-  .template-product .product__main-photos {
-    max-height: 72vh;   /* tune 65–80vh */
-    overflow: hidden;
-  }
-}
 
