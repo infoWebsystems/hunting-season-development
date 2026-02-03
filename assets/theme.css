@@ -11920,4 +11920,29 @@ h2, .h2 {
 .shopify-chat input::placeholder {
   color: #767676 !important;
 }
+/* PDP mobile: force hero media into a fixed box so we can bias the crop */
+@media (max-width: 768px) {
+  /* 1) Create a fixed “window” for the hero image */
+  .template-product .product__main-photos {
+    aspect-ratio: 4 / 5;     /* try 4/5 first */
+    overflow: hidden;        /* THIS is what enables the crop */
+  }
+
+  /* 2) Make the active slide and its media fill that window */
+  .template-product .product__main-photos .swiper,
+  .template-product .product__main-photos .swiper-wrapper,
+  .template-product .product__main-photos .swiper-slide {
+    height: 100%;
+  }
+
+  /* 3) Force the actual image to fill the window, then bias it downward */
+  .template-product .product__main-photos img,
+  .template-product .product__main-photos picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 85%;  /* show more bottom */
+    display: block;
+  }
+}
 
